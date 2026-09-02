@@ -169,11 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.insertBefore(navContainer, document.body.firstChild);
 
-  // Set active link
-  const currentPath = window.location.pathname;
+  // Set active link cleanly matching both .html and clean URLs
+  const currentPath = (window.location.pathname || "/").replace(/\/$/, "") || "/";
   const links = document.querySelectorAll('.bhavishyam-nav-btn');
   links.forEach(l => {
-    if (l.getAttribute('href') === currentPath) {
+    const href = (l.getAttribute('href') || "/").replace(/\/$/, "") || "/";
+    const hrefClean = href.replace(/\.html$/, "");
+    const currentClean = currentPath.replace(/\.html$/, "");
+    if (href === currentPath || hrefClean === currentClean) {
       l.classList.add('active');
     }
   });

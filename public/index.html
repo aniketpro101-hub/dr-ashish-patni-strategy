@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Ashish Patni (Bhavishyam) — 360° Growth Strategy & Market Leadership Presentation</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            vedic: {
+              900: '#091510',
+              800: '#0e241c',
+              700: '#135e43',
+              600: '#1e7d5a',
+              500: '#28966c',
+              100: '#e4f3eb',
+              50: '#f4f7f4'
+            },
+            royal: {
+              gold: '#c59b27',
+              goldLight: '#e8c046',
+              goldSoft: '#fbf6e8',
+              navy: '#121829',
+              amber: '#b45309'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#f4f7f4] text-[#0f1d17] antialiased">
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="drawerOverlay" class="fixed inset-0 bg-black/60 z-50 hidden transition-opacity"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileDrawer" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-[#091510] text-white z-50 transform -translate-x-full shadow-2xl flex flex-col border-r border-[#c59b27]/30">
+    <div class="p-5 border-b border-gray-800 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-[#c59b27] flex items-center justify-center font-serif-royal font-bold text-[#091510] text-lg">
+          भ
+        </div>
+        <div>
+          <h3 class="font-serif-royal font-bold text-sm tracking-wide text-white">BHAVISHYAM</h3>
+          <p class="text-[10px] text-gray-400">Dr. Ashish Patni Master Strategy</p>
+        </div>
+      </div>
+      <button id="closeDrawerBtn" class="p-2 text-gray-400 hover:text-white rounded-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-1 text-xs">
+      <button data-tab="tab-overview" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="layout-dashboard" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>1. Executive Command & Market Tailwinds</span>
+      </button>
+      <button data-tab="tab-identity" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="award" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>2. Identity, Credentials & Product Ladder</span>
+      </button>
+      <button data-tab="tab-competitors" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="swords" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>3. 360° Competitor Deep-Dives & Matrix</span>
+      </button>
+      <button data-tab="tab-playbook" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="rocket" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>4. 12-Month Content Engine & Calendar</span>
+      </button>
+      <button data-tab="tab-operations" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="cpu" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>5. Operations, WhatsApp Funnel & Crisis SOPs</span>
+      </button>
+      <button data-tab="tab-strategic" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="lightbulb" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>6. 8 Proprietary Strategic Breakthroughs</span>
+      </button>
+      <button data-tab="tab-financials" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="calculator" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>7. Financial P&L & Real-Time Simulator</span>
+      </button>
+      <button data-tab="tab-media" class="tab-btn w-full text-left px-3.5 py-3 rounded-xl flex items-center gap-3 text-gray-300 hover:bg-gray-800 transition">
+        <i data-lucide="newspaper" class="w-4 h-4 text-[#e8c046]"></i>
+        <span>8. Media, PR Calendar & Collab CRM</span>
+      </button>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-4 border-t border-gray-800 text-[11px] text-gray-400 space-y-1">
+      <div>Report By: <strong class="text-white">Aniket Samant</strong></div>
+      <div>Prepared With <strong class="text-[#e8c046]">RoasBodhi.in</strong></div>
+    </div>
+  </div>
+
+  <!-- Top Language Selector & Standalone Document Vault Quick Bar -->
+  <div class="bg-[#050c09] text-white border-b border-[#c59b27]/40 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 overflow-x-auto py-1 text-[11.5px]">
+        <span class="text-[#e8c046] font-bold uppercase tracking-wider flex items-center gap-1">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Full Document Library:
+        </span>
+        <a href="/page-one-view.html" class="bg-gradient-to-r from-[#c59b27] to-[#e8c046] text-black font-extrabold px-3 py-1 rounded-md shadow-md hover:opacity-90 transition whitespace-nowrap">🌟 ONE VIEW (Topper Blueprint)</a>
+        <a href="/page-creator-analysis.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">📊 Creator Analysis</a>
+        <a href="/page-market-playbook.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">🚀 12-Mo Playbook</a>
+        <a href="/page-research-report.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">🏛️ Research Report</a>
+        <a href="/page-competitive-positioning.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">⚔️ Positioning Matrix</a>
+        <a href="/page-rd-supplement.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">📈 Market R&D §13-14</a>
+        <a href="/page-additional-rd.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">🔬 12 R&D Modules</a>
+        <a href="/page-operational-intelligence.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">⚙️ Operations & Finance</a>
+        <a href="/page-email-seo-team-crisis.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">🛡️ Email, SEO & Crisis</a>
+        <a href="/page-strategic-breakthroughs.html" class="bg-white/10 hover:bg-[#135e43] text-gray-200 hover:text-white px-2.5 py-1 rounded-md border border-white/10 transition whitespace-nowrap">💡 8 Breakthroughs</a>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-2 text-[11px] text-gray-400">
+        <span>Strategic Blueprint By <strong class="text-white">Aniket Samant</strong> · <strong class="text-[#e8c046]">RoasBodhi.in</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Executive Header -->
+  <header class="sticky top-0 z-40 bg-[#091510] text-white border-b border-[#c59b27]/30 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Title -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#c59b27] via-[#e8c046] to-[#997520] p-0.5 shadow-lg flex items-center justify-center">
+            <div class="w-full h-full bg-[#091510] rounded-[10px] flex items-center justify-center">
+              <span class="font-serif-royal text-xl sm:text-2xl font-bold text-[#e8c046]">भ</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-serif-royal text-base sm:text-xl font-bold tracking-wide text-white">BHAVISHYAM</h1>
+              <span class="text-[9px] sm:text-[10px] px-2 py-0.5 rounded bg-[#c59b27]/20 text-[#e8c046] font-bold border border-[#c59b27]/40 uppercase tracking-wider">Enterprise Strategy</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-gray-300 font-medium">Dr. Ashish Patni · Economist & Astrologer (MBA, MA)</p>
+          </div>
+        </div>
+
+        <!-- Prominent Author & Agency Attributions -->
+        <div class="hidden lg:flex items-center gap-4">
+          <div class="text-right border-r border-gray-700 pr-4">
+            <div class="text-[10px] text-gray-400 font-semibold tracking-wider uppercase">Strategic Report By</div>
+            <div class="text-xs sm:text-sm font-bold text-[#e8c046] flex items-center gap-1.5 justify-end">
+              <i data-lucide="user-check" class="w-4 h-4 text-[#c59b27]"></i> Aniket Samant
+            </div>
+          </div>
+          <div class="text-left pl-1">
+            <div class="text-[10px] text-gray-400 font-semibold tracking-wider uppercase">Strategic Intelligence By</div>
+            <a href="https://roasbodhi.in" target="_blank" class="text-xs sm:text-sm font-extrabold text-white hover:text-[#e8c046] transition-colors flex items-center gap-1">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#c59b27]"></i> RoasBodhi.in
+            </a>
+          </div>
+          <button onclick="window.print()" class="no-print ml-3 px-3.5 py-1.5 rounded-lg bg-[#135e43] hover:bg-[#1e7d5a] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print / PDF
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button onclick="window.print()" class="no-print p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white">
+            <i data-lucide="printer" class="w-5 h-5"></i>
+          </button>
+          <button id="mobileMenuBtn" class="p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Desktop Sticky Navigation Tab Bar -->
+    <div class="bg-[#0e241c] border-t border-[#135e43]/60 overflow-x-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex space-x-1 py-2 text-xs font-semibold whitespace-nowrap" id="desktopNavTabs">
+          <button data-tab="tab-overview" class="tab-btn active px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="layout-dashboard" class="tab-icon w-3.5 h-3.5"></i> 1. Executive Summary & Tailwinds
+          </button>
+          <button data-tab="tab-identity" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="award" class="tab-icon w-3.5 h-3.5"></i> 2. Identity & Product Ladder
+          </button>
+          <button data-tab="tab-competitors" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="swords" class="tab-icon w-3.5 h-3.5"></i> 3. Competitor Benchmarks
+          </button>
+          <button data-tab="tab-playbook" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="rocket" class="tab-icon w-3.5 h-3.5"></i> 4. 12-Month Content Engine
+          </button>
+          <button data-tab="tab-operations" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="cpu" class="tab-icon w-3.5 h-3.5"></i> 5. Operations & WhatsApp
+          </button>
+          <button data-tab="tab-strategic" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="lightbulb" class="tab-icon w-3.5 h-3.5"></i> 6. Proprietary Breakthroughs
+          </button>
+          <button data-tab="tab-financials" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="calculator" class="tab-icon w-3.5 h-3.5"></i> 7. Financial P&L & Simulator
+          </button>
+          <button data-tab="tab-media" class="tab-btn px-3 py-2 rounded-lg text-gray-300 hover:text-white flex items-center gap-1.5 border border-transparent transition">
+            <i data-lucide="newspaper" class="tab-icon w-3.5 h-3.5"></i> 8. Media, PR & Collabs
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Presentation Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: EXECUTIVE SUMMARY & MACRO TAILWINDS -->
+    <!-- ========================================================================= -->
+    <section id="tab-overview" class="tab-pane block space-y-8">
+      
+      <!-- Hero Banner with Hindi & English Punchline -->
+      <div class="emerald-gradient-bg rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-[#c59b27]/40">
+        <div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-[#c59b27]/15 blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl space-y-4">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c59b27]/20 border border-[#c59b27]/40 text-[#e8c046] text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> National Market-Topper Blueprint 2026–2027
+          </div>
+
+          <h2 class="font-serif-royal text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            From #2 to India's Category #1: The 12-Month Master Strategy
+          </h2>
+
+          <div class="font-hindi text-lg sm:text-xl text-[#fbf6e8] font-semibold italic border-l-4 border-[#c59b27] pl-4 py-1">
+            "कर्म का हिसाब, डर का व्यापार नहीं — अर्थशास्त्र और वैदिक चक्रों का वैज्ञानिक संगम।"
+          </div>
+
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-light">
+            An end-to-end, data-validated growth playbook engineered specifically for <strong class="text-[#e8c046] font-semibold">Dr. Ashish Patni (Bhavishyam)</strong>. Bridging ancient Vedic sciences with macroeconomic pattern observation, institutional promoter advisory, and scalable D2C wellness infrastructure.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium text-gray-300">
+            <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <i data-lucide="shield-check" class="w-4 h-4 text-[#e8c046]"></i> Authored by: <strong class="text-white font-bold">Aniket Samant</strong>
+            </div>
+            <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#e8c046]"></i> Strategic Agency: <strong class="text-white font-bold">RoasBodhi.in</strong>
+            </div>
+            <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <i data-lucide="clock" class="w-4 h-4 text-[#e8c046]"></i> 12-Month Execution Horizon
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Core 4 KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="glass-panel p-6 rounded-2xl border border-gray-200 shadow-sm hover-elevate metric-pill">
+          <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Current Market Rank</div>
+          <div class="text-3xl font-extrabold text-[#091510] mt-1 font-heading">#2 in India</div>
+          <div class="text-xs text-[#135e43] font-bold mt-1 flex items-center gap-1">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Score 40.5/50 (Leads in 6 of 10 Dimensions)
+          </div>
+          <p class="text-[11px] text-gray-500 mt-2 font-hindi">केवल 2 अंकों की दूरी है जय मदान (42.5) से। ऑफलाइन और क्रेडेंशियल्स में आप पहले से #1 हैं।</p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-gray-200 shadow-sm hover-elevate metric-pill">
+          <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Year-1 Projected Revenue</div>
+          <div class="text-3xl font-extrabold text-[#091510] mt-1 font-heading">₹2.10 Cr</div>
+          <div class="text-xs text-[#135e43] font-bold mt-1 flex items-center gap-1">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> +₹1.35 Cr Digital Inbound Uplift
+          </div>
+          <p class="text-[11px] text-gray-500 mt-2 font-hindi">शुद्ध लाभ (Net Profit): ₹1.20 Cr (57.3% मार्जिन) स्टैंडर्ड इन्वेस्टमेंट टीयर पर।</p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-gray-200 shadow-sm hover-elevate metric-pill">
+          <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">12-Month Audience Goal</div>
+          <div class="text-3xl font-extrabold text-[#091510] mt-1 font-heading">100K IG · 50K YT</div>
+          <div class="text-xs text-[#135e43] font-bold mt-1 flex items-center gap-1">
+            <i data-lucide="users" class="w-3.5 h-3.5"></i> High-Trust Executive Audience
+          </div>
+          <p class="text-[11px] text-gray-500 mt-2 font-hindi">साफ और ऑर्गेनिक रीच, जिससे ब्रांड कोलाबरेशन पर 40% प्रीमियम रेट मिलेगा।</p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-gray-200 shadow-sm hover-elevate metric-pill">
+          <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Digital Investment ROI</div>
+          <div class="text-3xl font-extrabold text-[#091510] mt-1 font-heading">3.4× ROI</div>
+          <div class="text-xs text-[#135e43] font-bold mt-1 flex items-center gap-1">
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i> Standard ₹35L–50L Spend
+          </div>
+          <p class="text-[11px] text-gray-500 mt-2 font-hindi">डिजिटल पर लगाया गया हर ₹1 आपको ₹3.40 का शुद्ध व्यापारिक रिटर्न देगा।</p>
+        </div>
+      </div>
+
+      <!-- Hindi Strategic Note for Dr. Ashish Sir -->
+      <div class="p-6 sm:p-8 rounded-3xl hindi-callout shadow-md space-y-3">
+        <div class="flex items-start gap-4">
+          <div class="p-3 rounded-2xl bg-[#c59b27] text-white shadow-md">
+            <i data-lucide="compass" class="w-7 h-7"></i>
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-serif-royal font-bold text-lg sm:text-xl text-[#091510]">
+              आशीष सर के लिए विशेष रणनीतिक दृष्टि (Executive Hindi Briefing)
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-800 font-hindi leading-relaxed">
+              "आशीष सर, आज भारत में 900+ धार्मिक टेक स्टार्टअप्स और लाखों ज्योतिषी हैं, लेकिन 99% लोग सिर्फ 'डर और अंधविश्वास' बेच रहे हैं। कोई साढ़े साती का खौफ दिखा रहा है तो कोई लाखों के पत्थर। इस भारी शोर के बीच <strong>'Economist + Zero-Dogma Astrologer'</strong> की कुर्सी पूरी तरह से खाली है! 
+              <br><br>
+              कॉर्पोरेट प्रमोटर्स, सी-सूट एग्जीक्यूटिव्स और युवा पीढ़ी को एक ऐसा मार्गदर्शक चाहिए जो बैलेंस शीट, मैक्रोइकॉनॉमिक्स और नक्षत्रों के समय चक्र को एक साथ समझा सके। आपके पास 100+ शहरों का अनुभव, 2 मुख्यमंत्रियों के अवॉर्ड्स, और SOIL का पेटेंट फॉर्मूलेशन है। जब हम इस अनूठी विरासत को सही डिजिटल कंटेंट इंजन, 72-घंटे के वायरल प्रोटोकॉल और व्हाट्सएप ऑटोमेशन से जोड़ेंगे — तो भवदीय मंच को पूरे भारत का #1 ब्रांड बनने से कोई नहीं रोक सकता।"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 3 Tiers of Winning -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-4">
+        <div class="border-b border-gray-100 pb-4">
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="trophy" class="w-5 h-5 text-[#c59b27]"></i> 3 Tiers of Winning: 12 से 36 महीने का लक्ष्य
+          </h3>
+          <p class="text-xs text-gray-500 mt-1">हमारे विकास की तीन स्पष्ट और मापने योग्य अवस्थाएं।</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+          <div class="p-5 rounded-2xl bg-[#f4f7f4] border border-[#135e43]/30 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#135e43] text-white">W1 · Lane King</span>
+              <span class="text-xs font-semibold text-emerald-700">90%+ संभावना</span>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">#1 in Professional / Zero-Dogma Astrology</h4>
+            <p class="text-xs text-gray-600 font-hindi">महीने 1 से 6 में 'Economist Astrologer', 'Budget Astrology' और 'Boardroom Vastu' के हर कीवर्ड पर आपका राज होगा।</p>
+            <div class="text-[11px] font-semibold text-[#135e43] bg-emerald-50 p-2 rounded-lg">स्थिति: अनिवार्य जीत (Must-Win)</div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#f4f7f4] border border-[#c59b27]/40 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#c59b27] text-white">W2 · Category Top-3</span>
+              <span class="text-xs font-semibold text-amber-700">65–75% संभावना</span>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">Top-3 Overall in Indian Astro-Market</h4>
+            <p class="text-xs text-gray-600 font-hindi">100K+ फॉलोअर्स, 3 वायरल वीडियो (>1M व्यूज), नेशनल टीवी बजट पैनल, और 44/50 ब्रांड कंपोजिट स्कोर।</p>
+            <div class="text-[11px] font-semibold text-amber-800 bg-amber-50 p-2 rounded-lg">स्थिति: 12-महीने का मुख्य लक्ष्य</div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#f4f7f4] border border-gray-300 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-gray-800 text-white">W3 · Market #1</span>
+              <span class="text-xs font-semibold text-gray-600">Year 2–3 क्षितिज</span>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">Overtake Jai Madaan as India's #1</h4>
+            <p class="text-xs text-gray-600 font-hindi">जय मदान को पछाड़कर भारत का नंबर 1 समग्र ज्योतिष एवं वेलनेस ब्रांड बनना। राष्ट्रीय मीडिया सिंडिकेशन और अंतरराष्ट्रीय SOIL एक्सपोर्ट।</p>
+            <div class="text-[11px] font-semibold text-gray-700 bg-gray-100 p-2 rounded-lg">स्थिति: दीर्घकालिक महात्वाकांक्षा</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Macro Market Data & Interactive Graphs -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Bar Chart: CAGR Across Verticals -->
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-[#135e43]"></i> सबसे तेजी से बढ़ते बाजार (CAGR % Annual Growth)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">प्रमाणित शोध रिपोर्टों से संकलित वार्षिक वृद्धि दर</p>
+            </div>
+            <span class="text-xs font-bold text-[#c59b27] bg-[#fbf6e8] px-2.5 py-1 rounded border border-[#c59b27]/30">Sourced Data</span>
+          </div>
+          <div class="h-80">
+            <canvas id="macroGrowthChart"></canvas>
+          </div>
+          <p class="text-xs text-gray-600 italic bg-gray-50 p-3 rounded-xl border border-gray-200 font-hindi">
+            <strong>प्रमुख निष्कर्ष:</strong> आपके व्यापार का हर सेगमेंट 8.30% से लेकर 49.19% की वार्षिक दर से बढ़ रहा है। बाजार का कोई भी क्षेत्र सिकुड़ नहीं रहा है।
+          </p>
+        </div>
+
+        <!-- Sourced Market Fact Cards -->
+        <div class="lg:col-span-6 space-y-3">
+          <div class="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-sm text-[#091510]">1. India Astrology App Market</h4>
+              <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2 py-0.5 rounded">49.19% CAGR</span>
+            </div>
+            <p class="text-xs text-gray-600 mt-1"><strong>$163M (2024) ➔ $1,797M (2030)</strong>. वैदिक ज्योतिष का 46% मार्केट शेयर है। एस्ट्रोटॉक 2026 में $77M+ रेवेन्यू पर IPO ला रहा है। उत्तर भारत का 34% योगदान है।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-sm text-[#091510]">2. Spiritual & Devotional Products (SOIL)</h4>
+              <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2 py-0.5 rounded">8.30% CAGR</span>
+            </div>
+            <p class="text-xs text-gray-600 mt-1"><strong>$3.7B ➔ $6.5B (2032)</strong>. ऑनलाइन 40%+ नए उपभोक्ता पर्सनलाइज्ड ज्योतिष किट अपना रहे हैं। 70% ग्राहक सोशल मीडिया से खोजते हैं।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-sm text-[#091510]">3. India MICE & Corporate Keynotes</h4>
+              <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2 py-0.5 rounded">11.92% CAGR</span>
+            </div>
+            <p class="text-xs text-gray-600 mt-1"><strong>$42.25B ➔ $74.12B (2031)</strong>. 52.9% कॉर्पोरेट बजट। पूर्वी भारत 11.58% के साथ सबसे तेज बढ़ रहा है। टेक/फार्मा बजट 110% रिकवर हो चुके हैं।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-sm text-[#135e43] bg-emerald-50 px-2 py-0.5 rounded">28.00% CAGR</span>
+            </div>
+            <p class="text-xs text-gray-600 mt-1"><strong>$0.8B ➔ $7.38B (2034)</strong>. 105M+ श्रोता। <strong>76% साप्ताहिक पॉडकास्ट श्रोता विज्ञापन सुनने के बाद खरीदारी का फैसला लेते हैं।</strong></p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-sm text-[#091510]">5. Tier 2 & 3 City Wealth Explosion</h4>
+              <span class="text-xs font-bold text-[#c59b27] bg-amber-50 px-2 py-0.5 rounded">93% Growth</span>
+            </div>
+            <p class="text-xs text-gray-600 mt-1">2036 तक भारत के कुल खर्च का <strong>93% टॉप-5 महानगरों के बाहर</strong> से आएगा। आपका 50+ शहरों का दौरा कोई मजबूरी नहीं, बल्कि सबसे बड़ा रणनीतिक लाभ है!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: IDENTITY, CREDENTIAL MOAT & PRODUCT LADDER -->
+    <!-- ========================================================================= -->
+    <section id="tab-identity" class="tab-pane hidden space-y-8">
+      
+      <!-- Brand Profile Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-gray-100 pb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-[#091510] border-2 border-[#c59b27] flex items-center justify-center text-[#e8c046] font-serif-royal text-2xl font-bold">
+              AP
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="font-serif-royal text-2xl font-bold text-[#091510]">Dr. Ashish Patni</h2>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#135e43]/10 text-[#135e43] text-xs font-bold border border-[#135e43]/20">भविष्यम् · Bhavishyam</span>
+              </div>
+              <p class="text-xs text-gray-500 font-medium mt-0.5">MBA (Finance) · MA (Economics) · Pioneer of Cosmic Finance & Mantrovation</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-lg">Raipur HQ</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-lg">Indore Hub</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-lg">Mumbai Desk</span>
+          </div>
+        </div>
+
+        <!-- Verified Credential Grid -->
+        <div class="mt-6">
+          <h3 class="font-bold text-sm text-[#091510] uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-[#135e43]"></i> प्रमाणित आधिकारिक साख (Verified Authority Moat)
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-4 rounded-2xl bg-[#f4f7f4] border border-gray-200 space-y-1">
+              <div class="text-[10px] font-bold text-amber-700 uppercase">State Government Honor</div>
+              <h4 class="font-bold text-xs text-[#091510]">State Gaurav Puraskar</h4>
+              <p class="text-[11px] text-gray-600 font-hindi">छत्तीसगढ़ के पूर्व मुख्यमंत्री <strong>डॉ. रमन सिंह</strong> (भाजपा) द्वारा प्रदत्त।</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-[#f4f7f4] border border-gray-200 space-y-1">
+              <div class="text-[10px] font-bold text-amber-700 uppercase">Cross-Party State Honor</div>
+              <h4 class="font-bold text-xs text-[#091510]">State Icon Award</h4>
+              <p class="text-[11px] text-gray-600 font-hindi">पूर्व मुख्यमंत्री <strong>भूपेश बघेल</strong> (कांग्रेस) द्वारा ज़ी कॉन्क्लेव में सम्मानित।</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-[#f4f7f4] border border-gray-200 space-y-1">
+              <div class="text-[10px] font-bold text-amber-700 uppercase">Institutional Record</div>
+              <h4 class="font-bold text-xs text-[#091510]">Guinness World Record</h4>
+              <p class="text-[11px] text-gray-600 font-hindi">लाइफ क्राफ्ट ग्लोबल फाउंडेशन के संस्थापक (अखंड आध्यात्मिक भजन मैराथन रिकॉर्ड)।</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-[#f4f7f4] border border-gray-200 space-y-1">
+              <div class="text-[10px] font-bold text-amber-700 uppercase">Spiritual Lineage</div>
+              <h4 class="font-bold text-xs text-[#091510]">Shankaracharya Blessing</h4>
+              <p class="text-[11px] text-gray-600 font-hindi">जगद्गुरु शंकराचार्य स्वामी स्वरूपानंद सरस्वती जी महाराज का प्रत्यक्ष आशीर्वाद।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 4 Core Product Ladders -->
+      <div class="space-y-6">
+        <div class="flex items-center justify-between">
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="layers" class="w-5 h-5 text-[#c59b27]"></i> भविष्यम् उच्च-मूल्य उत्पाद एवं सेवा संरचना
+          </h3>
+          <span class="text-xs text-gray-500 font-semibold font-hindi">4 मुख्य मोनेटाइजेशन पिलर्स</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- E.Y.E. Keynote Card -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4 hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 uppercase">Flagship B2B Offer</span>
+                <h4 class="font-bold text-base text-[#091510] mt-1">E.Y.E. (Explore Your Energy) Keynotes</h4>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-[#135e43]">₹2L – ₹15L+</span>
+                <div class="text-[10px] text-gray-400">प्रति की-नोट</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">50+ शहरों में 50,000+ लोगों द्वारा सराहा गया 90 मिनट का कॉर्पोरेट की-नोट। इसमें <strong>12-डायमेंशन एनर्जी टूलकिट</strong> का समावेश है (बिना तोड़-फोड़, बिना अंधविश्वास)।</p>
+            <div class="p-3 bg-gray-50 rounded-2xl text-[11px] text-gray-700 space-y-1 border border-gray-100">
+              <div><strong>12 टूल्स:</strong> एस्ट्रो एनर्जी, वास्तु संरेखण, कलर रेजोनेंस, बीजाक्षर मंत्र, यंत्र, बायोरिदम, पंचतत्व धातु, अंकशास्त्र, श्वास, स्थान, कर्म जागरूकता, ऊर्जा जागरण।</div>
+            </div>
+          </div>
+
+          <!-- SOIL Card -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4 hover:border-[#c59b27] transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 uppercase">D2C Margin Engine</span>
+                <h4 class="font-bold text-base text-[#091510] mt-1">SOIL (Spiritual Oil) — World's 1st Personalized Oil</h4>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-[#c59b27]">₹4,999 – ₹24,999</span>
+                <div class="text-[10px] text-gray-400">4 विशिष्ट फॉर्मूलेशन</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">व्यक्ति की जन्म कुंडली, नक्षत्र और राशि के अनुसार <strong>7-दिवसीय होरा अनुष्ठान चक्र</strong> द्वारा सक्रिय, शुद्ध चांदी तत्व के साथ नक्काशीदार लकड़ी के बॉक्स में।</p>
+            <div class="grid grid-cols-2 gap-2 text-[11px] text-gray-700">
+              <div class="bg-gray-50 p-2 rounded-xl border">1. फुट ड्रॉपर (गहरी नींद व ग्राउंडिंग)</div>
+              <div class="bg-gray-50 p-2 rounded-xl border">2. पाम रोलर (बोर्डरूम आत्मविश्वास)</div>
+              <div class="bg-gray-50 p-2 rounded-xl border">3. औरा बाथ (नकारात्मकता से सुरक्षा)</div>
+              <div class="bg-gray-50 p-2 rounded-xl border">4. वास्तु दीपक तेल (घर व ऑफिस संतुलन)</div>
+            </div>
+          </div>
+
+          <!-- Technical Vastu Card -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4 hover:border-[#135e43] transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase">High-Ticket Consulting</span>
+                <h4 class="font-bold text-base text-[#091510] mt-1">Technical Vastu (बिना तोड़-फोड़)</h4>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-[#135e43]">₹15K – ₹7L+</span>
+                <div class="text-[10px] text-gray-400">आवासीय व औद्योगिक</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">इंजीनियर-ग्रेड दिशात्मक ऊर्जा मैपिंग। बंगलों, कॉर्पोरेट मुख्यालयों और बड़े कारखानों का बिना एक भी दीवार तोड़े वैज्ञानिक ऊर्जा सुधार।</p>
+            <div class="p-3 bg-gray-50 rounded-2xl text-[11px] text-gray-700 border border-gray-100">
+              <strong>हस्ताक्षर एवं लोगो ऑडिट:</strong> व्यक्तिगत हस्ताक्षर सुधार (₹7,500) तथा कॉर्पोरेट लोगो ऊर्जा ऑडिट (₹25,000–₹75,000)।
+            </div>
+          </div>
+
+          <!-- CXO Mentoring Card -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4 hover:border-purple-600 transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800 uppercase">Confidential Retainer</span>
+                <h4 class="font-bold text-base text-[#091510] mt-1">CXO Decision Mentoring (100% NDA)</h4>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-purple-700">₹3L – ₹6L</span>
+                <div class="text-[10px] text-gray-400">6-महीने का रिटेनर</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">बिजनेस प्रमोटर्स के लिए दशा मैपिंग, एम एंड ए (M&A) सौदों की टाइमिंग, बोर्डरूम संतुलन और पूंजी आवंटन के शुभ समय का निर्धारण। (अधिकतम 8 समवर्ती ग्राहक)।</p>
+            <div class="p-3 bg-gray-50 rounded-2xl text-[11px] text-gray-700 border border-gray-100">
+              <strong>सत्र दर:</strong> ₹25,000 / 90 मिनट | <strong>3-सत्र पैक:</strong> ₹60,000.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: 360° COMPETITOR BENCHMARKS & MATRIX -->
+    <!-- ========================================================================= -->
+    <section id="tab-competitors" class="tab-pane hidden space-y-8">
+      
+      <!-- Composite Score Chart & Radar Chart -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- 10-Dimension Radar Chart -->
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="radar" class="w-4 h-4 text-[#c59b27]"></i> 10-आयामी प्रतिस्पर्धी रडार विश्लेषण (Radar Matrix)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">डॉ. आशीष पटनी बनाम जय मदान बनाम आस्किन एस्ट्रोलॉजी</p>
+            </div>
+            <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2.5 py-1 rounded">Rank #2</span>
+          </div>
+          <div class="h-80">
+            <canvas id="competitorRadarChart"></canvas>
+          </div>
+          <p class="text-xs text-gray-600 bg-emerald-50 p-3 rounded-xl border border-emerald-200 font-hindi">
+            <strong>रडार निष्कर्ष:</strong> आप क्रेडेंशियल्स, ऑफलाइन पहुंच, उत्पाद की गहराई, ट्रस्ट, विशिष्टता और पीआर में जय मदान से आगे हैं। केवल डिजिटल रीच में पीछे हैं, जिसे यह 12 महीने का प्लान पूरा करेगा।
+          </p>
+        </div>
+
+        <!-- Composite Score Bar Chart -->
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="bar-chart-2" class="w-4 h-4 text-[#135e43]"></i> भारत के शीर्ष 6 एस्ट्रो-क्रिएटर्स का समग्र स्कोर (Max: 50)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">10 आयामों पर विस्तृत विश्लेषण</p>
+            </div>
+          </div>
+          <div class="h-80">
+            <canvas id="competitorScoreChart"></canvas>
+          </div>
+          <p class="text-xs text-gray-600 bg-amber-50 p-3 rounded-xl border border-amber-200 font-hindi">
+            <strong>स्कोर:</strong> डॉ. आशीष पटनी (40.5/50) केवल 2 अंक पीछे हैं डॉ. जय मदान (42.5/50) से। बाकी सभी 34.5 से नीचे हैं।
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Engagement Rate vs Reach Chart -->
+      <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+          <div>
+            <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+              <i data-lucide="activity" class="w-4 h-4 text-[#24509e]"></i> सहभागिता दर तुलना (Verified Engagement Rate %)
+            </h3>
+            <p class="text-xs text-gray-500 font-hindi">क्रिएटर्स की वास्तविक ऑडियंस क्वालिटी और विश्वास का पैमाना</p>
+          </div>
+          <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded">Audience Trust</span>
+        </div>
+        <div class="h-64">
+          <canvas id="erVsReachChart"></canvas>
+        </div>
+        <p class="text-xs text-gray-600 bg-blue-50 p-3 rounded-xl border border-blue-200 font-hindi">
+          <strong>नोट:</strong> 67% ब्रांड्स अब फर्जी फॉलोअर्स वाली प्रोफाइल को खारिज कर रहे हैं। आपके जैसे उच्च-गुणवत्ता एंगेजमेंट वाले खाते को 40% अतिरिक्त ब्रांड दर मिलती है।
+        </p>
+      </div>
+
+      <!-- 6 Competitors Cards Grid -->
+      <div class="space-y-4">
+        <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+          <i data-lucide="users" class="w-5 h-5 text-[#135e43]"></i> भारत के 6 प्रमुख ज्योतिष क्रिएटर्स का विस्तृत SWOT
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">1. Dr. Jai Madaan</h4>
+                <div class="text-[11px] text-gray-500">Celebrity Lifestyle Brand</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">42.5/50</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 7.0M IG · 1.1M YT</div>
+              <div><strong>एंगेजमेंट:</strong> ~1.42% (मजबूत सेलिब्रिटी साख)</div>
+              <div><strong>मोनेटाइजेशन:</strong> कंसल्टेशन, ब्रांड्स, म्यूजिक, टीवी</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> अंग्रेजी/ग्लैमर अधिक होने से टियर 2/3 जनता का विश्वास कम, अत्यधिक अमीर लाइफस्टाइल से विवाद का खतरा।
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">2. Askin Astrology (Rahul Raz)</h4>
+                <div class="text-[11px] text-gray-500">Short-Form Remedy Engine</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-xs font-bold">33.0/50</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 2.0M + 844K Hindi IG · 600K YT</div>
+              <div><strong>एंगेजमेंट:</strong> हाई वॉल्यूम (1.5+ पोस्ट/दिन)</div>
+              <div><strong>मोनेटाइजेशन:</strong> व्हाट्सएप कंसल्ट, रुद्राक्ष, रिपोर्ट</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> साधारण उपाय जो कोई भी कॉपी कर ले, कमजोर पर्सनल ब्रांड, शून्य टीवी या प्रेस प्रामाणिकता।
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">3. Acharya Vinod Kumar</h4>
+                <div class="text-[11px] text-gray-500">Political & Authority Legacy</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-xs font-bold">33.0/50</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 2.0M IG · 23K YT · 24K X</div>
+              <div><strong>एंगेजमेंट:</strong> ~0.91% (कम दैनिक सहभागिता)</div>
+              <div><strong>मोनेटाइजेशन:</strong> हाई-टिकट राजनेता व कॉर्पोरेट क्लाइंट्स</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> यूट्यूब शॉर्ट्स से पूरी तरह नदारद, कम एंगेजमेंट, पुरानी शैली जो सटीक न बैठने पर आलोचना झेलती है।
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">4. Master Aditya Varma</h4>
+                <div class="text-[11px] text-gray-500">US Diaspora Phone Reader</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-red-100 text-red-800 text-xs font-bold">22.5/50 ⚠</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 1.3M IG (सिर्फ 79 पोस्ट्स) · 542K FB</div>
+              <div><strong>एंगेजमेंट:</strong> ⚠ संदिग्ध अनुपात (16K/पोस्ट)</div>
+              <div><strong>मोनेटाइजेशन:</strong> यूएस फोन साइकिक रीडिंग</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> सामग्री का अभाव, ब्रांड्स डेमोग्राफिक ऑडिट में इस खाते को दरकिनार कर देते हैं।
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">5. Preetika Rao</h4>
+                <div class="text-[11px] text-gray-500">Media / Actor-Podcaster</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-xs font-bold">34.5/50</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 1.3M IG · 174K YT (शीर्ष 1.2M)</div>
+              <div><strong>एंगेजमेंट:</strong> ~2.0% (उच्चतम वास्तविक एंगेजमेंट)</div>
+              <div><strong>मोनेटाइजेशन:</strong> पॉडकास्ट ब्रांड डील्स, एक्टिंग हेलो</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> यूट्यूब ऑडियंस सीमित, बहुत समय लेने वाला प्रोडक्शन, कोई खुद का उत्पाद या कंसल्टिंग लाइन नहीं।
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-sm text-[#091510]">6. Bhoomika Kalam</h4>
+                <div class="text-[11px] text-gray-500">Credentials / Legacy Author</div>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-xs font-bold">33.5/50</span>
+            </div>
+            <div class="text-xs text-gray-700 space-y-1">
+              <div><strong>पहुंच:</strong> 648K IG · 267K YT (1,400+ वीडियो)</div>
+              <div><strong>एंगेजमेंट:</strong> सुसंगत मध्यम स्तर</div>
+              <div><strong>मोनेटाइजेशन:</strong> एस्ट्रोभूमि कंसल्टेशन व पुस्तकें</div>
+            </div>
+            <div class="p-2.5 bg-red-50 text-red-800 rounded-xl text-[11px] font-hindi">
+              <strong>कमजोरी:</strong> ग्रुप में सबसे कम रीच, पुराना विजुअल लुक, इंदौर बेस होने से दिल्ली-मुंबई मीडिया पहुंच सीमित।
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Non-Astrology Speakers Benchmarks Table -->
+      <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+        <div>
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="mic-2" class="w-5 h-5 text-[#c59b27]"></i> की-नोट स्पीकर बाजार तुलना (हमारा वास्तविक मुकाबला किससे है)
+          </h3>
+          <p class="text-xs text-gray-500 mt-1 font-hindi">कॉर्पोरेट की-नोट बजट के लिए आपका मुकाबला केवल ज्योतिषियों से नहीं, बल्कि मोटिवेशनल और मैनेजमेंट स्पीकर्स से है।</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-gray-200 bg-gray-50 text-gray-600">
+                <th class="py-2.5 px-3 font-bold">वक्ता (Speaker)</th>
+                <th class="py-2.5 px-3 font-bold">श्रेणी (Category)</th>
+                <th class="py-2.5 px-3 font-bold">अनुमानित फीस (Fee)</th>
+                <th class="py-2.5 px-3 font-bold">पहुंच (Reach)</th>
+                <th class="py-2.5 px-3 font-bold">मुख्य यूएसपी (Differentiator)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-700">
+              <tr><td class="py-2 px-3 font-bold">सद्गुरु (Sadhguru)</td><td>वैश्विक आध्यात्मिक गुरु</td><td class="font-semibold text-emerald-700">₹25L – ₹1Cr+</td><td>10M+ YT</td><td>ईशा फाउंडेशन वैश्विक संस्थागत साख</td></tr>
+              <tr><td class="py-2 px-3 font-bold">गौर गोपाल दास (Gaur Gopal Das)</td><td>आध्यात्मिक + कॉर्पोरेट</td><td class="font-semibold text-emerald-700">₹10L – ₹30L</td><td>5M+ YT</td><td>कॉर्पोरेट ह्यूमर और व्यावहारिक कहानियां</td></tr>
+              <tr><td class="py-2 px-3 font-bold">बीके शिवानी (BK Shivani)</td><td>ब्रह्मकुमारीज</td><td class="font-semibold text-gray-500">प्रायः निशुल्क / ट्रस्ट</td><td>8M+ YT</td><td>संस्थागत बैकअप (निशुल्क मॉडल)</td></tr>
+              <tr><td class="py-2 px-3 font-bold">जय शेट्टी (Jay Shetty)</td><td>सेल्फ-हेल्प / लाइफस्टाइल</td><td class="font-semibold text-emerald-700">₹50L – ₹2Cr</td><td>12M+ YT</td><td>पश्चिमी पॉडकास्ट मीडिया साम्राज्य</td></tr>
+              <tr><td class="py-2 px-3 font-bold">डॉ. विवेक बिंद्रा (Dr. Vivek Bindra)</td><td>बिजनेस मोटिवेशन</td><td class="font-semibold text-emerald-700">₹5L – ₹20L</td><td>20M+ YT</td><td>हिंदी भाषी MSME बिजनेस ओनर्स पर पकड़</td></tr>
+              <tr><td class="py-2 px-3 font-bold">संदीप माहेश्वरी (Sandeep Maheshwari)</td><td>युवा मोटिवेशन</td><td class="font-semibold text-emerald-700">₹5L – ₹15L</td><td>28M+ YT</td><td>गैर-व्यावसायिक युवा विश्वास</td></tr>
+              <tr class="bg-amber-50/80 font-bold"><td class="py-2 px-3 text-[#091510]">डॉ. आशीष पटनी (Dr. Ashish Patni)</td><td class="text-[#135e43]">एस्ट्रो-इकोनॉमिक्स व वास्तु</td><td class="text-[#c59b27]">₹2L – ₹15L+</td><td>50K लाइव श्रोता</td><td>इकलौते अर्थशास्त्री-ज्योतिषी, SOIL, 12-टूल एनर्जी फ्रेमवर्क</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 4: 12-MONTH CONTENT ENGINE & PLAYBOOK -->
+    <!-- ========================================================================= -->
+    <section id="tab-playbook" class="tab-pane hidden space-y-8">
+      
+      <!-- 4 Pillars Cards -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="columns-3" class="w-5 h-5 text-[#c59b27]"></i> 4 मुख्य कंटेंट पिलर्स (30-30-20-20 फॉर्मूला)
+          </h3>
+          <span class="text-xs font-semibold text-gray-500 font-hindi">संतुलित और बौद्धिक कंटेंट ढांचा</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-white p-5 rounded-3xl border-t-4 border-[#135e43] shadow-sm space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-[#135e43]">P1 · 30% शेयर</span>
+              <i data-lucide="trending-up" class="w-4 h-4 text-[#135e43]"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">The Economist's Chart</h4>
+            <p class="text-xs text-gray-600 leading-relaxed font-hindi">वित्त × ज्योतिष चक्र। बजट विश्लेषण, मार्केट वोलैटिलिटी, बोर्डरूम वास्तु, सिग्नेचर साइंस। यह आपका सबसे बड़ा अनकॉपीएबल डिफेंस है।</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border-t-4 border-[#c59b27] shadow-sm space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-[#c59b27]">P2 · 30% शेयर</span>
+              <i data-lucide="shield-alert" class="w-4 h-4 text-[#c59b27]"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">Zero-Dogma Mythbusters</h4>
+            <p class="text-xs text-gray-600 leading-relaxed font-hindi">डर-आधारित ज्योतिष का खंडन (राहु काल खौफ, महंगे उपाय) और 'ऑब्जर्व करो, डरो मत' का संदेश। सबसे ज्यादा ऑर्गेनिक शेयर इसी से मिलते हैं।</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border-t-4 border-[#24509e] shadow-sm space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-[#24509e]">P3 · 20% शेयर</span>
+              <i data-lucide="mic" class="w-4 h-4 text-[#24509e]"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">The Stage (E.Y.E.)</h4>
+            <p class="text-xs text-gray-600 leading-relaxed font-hindi">की-नोट्स की लाइव रिकॉर्डिंग: 10-सेकंड मेंटल स्विच, ऑडियंस ब्रेकथ्रू मोमेंट्स, लाइव सवाल-जवाब। इससे सीधे बड़े इवेंट्स बुक होते हैं।</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border-t-4 border-[#8e2a6d] shadow-sm space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-[#8e2a6d]">P4 · 20% शेयर</span>
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#8e2a6d]"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#091510]">SOIL & The Lab</h4>
+            <p class="text-xs text-gray-600 leading-relaxed font-hindi">7-दिवसीय होरा अनुष्ठान का बिहाइंड-द-सीन्स, जड़ी-बूटियां, शुद्ध चांदी और लकड़ी के नक्काशीदार बॉक्स की लग्जरी कहानी। D2C बिक्री इंजन।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 72-Hour Virality SOP -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="border-b border-gray-100 pb-3">
+          <h3 class="font-serif-royal text-lg font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="zap" class="w-5 h-5 text-[#c59b27]"></i> 72-घंटे का वायरल प्रोटोकॉल (72-Hour Virality SOP)
+          </h3>
+          <p class="text-xs text-gray-500 font-hindi">हर नए वीडियो को एल्गोरिदम में टॉप पर ले जाने की चरणबद्ध प्रक्रिया।</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">घंटा 0 (Publish)</span>
+            <ul class="text-xs text-gray-600 space-y-1 list-disc list-inside font-hindi">
+              <li>12:30 PM या 6:30 PM पर अपलोड</li>
+              <li>पिन किया गया विचारोत्तेजक प्रश्न</li>
+              <li>व्हाट्सएप स्टेटस व 3 ग्रुप्स में शेयर</li>
+              <li><strong>पहले 30 मिनट में हर कमेंट का जवाब दें</strong> (एल्गोरिदम वेलोसिटी सिग्नल)</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-bold">घंटा 24 (Optimize)</span>
+            <ul class="text-xs text-gray-600 space-y-1 list-disc list-inside font-hindi">
+              <li>यूट्यूब और इंस्टाग्राम एनालिटिक्स जांचें</li>
+              <li>यदि CTR > 8% ➔ ₹500–₹2,000 बूस्ट लगाएं</li>
+              <li>टॉप 20 कमेंट्स पर काउंटर सवाल पूछें</li>
+              <li>विजेता क्लिप को स्टोरीज में दोबारा शेयर करें</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-bold">घंटा 72 (Convert)</span>
+            <ul class="text-xs text-gray-600 space-y-1 list-disc list-inside font-hindi">
+              <li>बेस्ट शॉर्ट को लॉन्ग-फॉर्म वीडियो स्क्रिप्ट बनाएं</li>
+              <li>यदि 100K+ व्यूज ➔ अखबारों को ऑप-एड पिच करें</li>
+              <li>सर्वश्रेष्ठ 60 सेकंड को फेसबुक/X पर डालें</li>
+              <li>डेटा के आधार पर अगले हफ्ते का कैलेंडर बनाएं</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 30-Day Calendar with Filter & Search -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-4">
+          <div>
+            <h3 class="font-serif-royal text-lg font-bold text-[#091510] flex items-center gap-2">
+              <i data-lucide="calendar" class="w-5 h-5 text-[#135e43]"></i> 30-दिवसीय रेडी-टू-पब्लिश कंटेंट कैलेंडर
+            </h3>
+            <p class="text-xs text-gray-500 font-hindi">दिन-प्रतिदिन का सटीक रिकॉर्डिंग व पब्लिशिंग शेड्यूल।</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <input type="text" id="calSearchInput" placeholder="कैलेंडर खोजें..." class="px-3 py-1.5 text-xs rounded-xl border border-gray-300 focus:outline-none focus:border-[#135e43]">
+            <select id="calPillarFilter" class="px-3 py-1.5 text-xs rounded-xl border border-gray-300 bg-white font-medium">
+              <option value="ALL">सभी पिलर्स (All Pillars)</option>
+              <option value="P1">P1: अर्थशास्त्री (Economist)</option>
+              <option value="P2">P2: मिथक खंडन (Mythbuster)</option>
+              <option value="P3">P3: स्टेज (The Stage)</option>
+              <option value="P4">P4: SOIL व लैब</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto max-h-96">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="sticky top-0 bg-gray-50 border-b border-gray-200">
+              <tr class="text-gray-600">
+                <th class="py-2.5 px-3 font-bold w-16">दिन</th>
+                <th class="py-2.5 px-3 font-bold w-36">कंटेंट प्रकार</th>
+                <th class="py-2.5 px-3 font-bold">विषय / शीर्षक हुक</th>
+                <th class="py-2.5 px-3 font-bold w-36">प्लेटफॉर्म</th>
+              </tr>
+            </thead>
+            <tbody id="calendarTableBody" class="divide-y divide-gray-100 text-gray-700">
+              <tr class="calendar-row" data-pillar="Manifesto"><td class="py-2 px-3 font-bold text-[#135e43]">Day 01</td><td class="px-3 font-semibold">Manifesto / Bio</td><td class="px-3 font-hindi">"Main economist hoon. Yahi wajah hai ki meri astrology alag hai."</td><td class="px-3 text-gray-500">Reel + Short + Pin Bio</td></tr>
+              <tr class="calendar-row" data-pillar="P2"><td class="py-2 px-3 font-bold text-[#135e43]">Day 02</td><td class="px-3 font-semibold">Mythbuster (P2)</td><td class="px-3 font-hindi">Rahu Kaal = 1.5 ghante ka darr. Actual science: sirf ek pattern. ₹0 solution.</td><td class="px-3 text-gray-500">IG Carousel + Short</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 03</td><td class="px-3 font-semibold">Vastu (P1)</td><td class="px-3 font-hindi">Aapke office ki sabse badi galti — table ki direction (Boardroom frame).</td><td class="px-3 text-gray-500">FB Video (5m) + Short</td></tr>
+              <tr class="calendar-row" data-pillar="P4"><td class="py-2 px-3 font-bold text-[#135e43]">Day 04</td><td class="px-3 font-semibold">SOIL BTS (P4)</td><td class="px-3 font-hindi">Day 1: Personal energy profiling (Anonymous client kit unboxing).</td><td class="px-3 text-gray-500">Story Series + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 05</td><td class="px-3 font-semibold">Economist (P1)</td><td class="px-3 font-hindi">Saturn — market ka CFO. 3 signs jo har bear phase se pehle aate hain.</td><td class="px-3 text-gray-500">Short + Poll</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 06</td><td class="px-3 font-semibold">Stage Clip (P3)</td><td class="px-3 font-hindi">Live demo: "Aankh band karo — 10 second energy switch".</td><td class="px-3 text-gray-500">IG Carousel + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 07</td><td class="px-3 font-semibold">Stage Q&A (P3)</td><td class="px-3 font-hindi">90 min ka program — 30 sec wala goldmine moment.</td><td class="px-3 text-gray-500">Short + Story</td></tr>
+              <tr class="calendar-row" data-pillar="P2"><td class="py-2 px-3 font-bold text-[#135e43]">Day 08</td><td class="px-3 font-semibold">Mythbuster (P2)</td><td class="px-3 font-hindi">Tali phodna / glass todna — science of ritual aur kab NA karein.</td><td class="px-3 text-gray-500">Short + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 09</td><td class="px-3 font-semibold">Signature Audit (P1)</td><td class="px-3 font-hindi">Aapki salary aapke signature se leak ho rahi hai — 3 stroke fix.</td><td class="px-3 text-gray-500">Reel (ManyChat CTA)</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 10</td><td class="px-3 font-semibold">Long-Form Flagship</td><td class="px-3 font-bold text-purple-800 font-hindi">Cosmic Finance: Mera 12 saal ka research — poora explainer (12 min).</td><td class="px-3 text-gray-500">YouTube Flagship #1</td></tr>
+              <tr class="calendar-row" data-pillar="P4"><td class="py-2 px-3 font-bold text-[#135e43]">Day 11</td><td class="px-3 font-semibold">SOIL BTS (P4)</td><td class="px-3 font-hindi">Day 2: Astro-herbal formulation (ASMR herb macro shots).</td><td class="px-3 text-gray-500">Short + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 12</td><td class="px-3 font-semibold">Vastu (P1)</td><td class="px-3 font-hindi">Bedroom ki 3 galtiyan jo neend kharab karti hain — bina tode.</td><td class="px-3 text-gray-500">FB Video (6 min)</td></tr>
+              <tr class="calendar-row" data-pillar="P2"><td class="py-2 px-3 font-bold text-[#135e43]">Day 13</td><td class="px-3 font-semibold">Mythbuster (P2)</td><td class="px-3 font-hindi">Kundali milana = shaadi rokna? Modern matching reality.</td><td class="px-3 text-gray-500">IG Carousel</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 14</td><td class="px-3 font-semibold">Stage Clip (P3)</td><td class="px-3 font-hindi">Zero-cost energy switch #2 — phone screen aur mental focus.</td><td class="px-3 text-gray-500">Short + Poll</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 15</td><td class="px-3 font-semibold">Economist (P1)</td><td class="px-3 font-hindi">IPO launch ka din — chart mein pehle kya dikhta hai?</td><td class="px-3 text-gray-500">Short + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P4"><td class="py-2 px-3 font-bold text-[#135e43]">Day 16</td><td class="px-3 font-semibold">SOIL BTS (P4)</td><td class="px-3 font-hindi">Day 3–4: Hora activation ritual & Navgraha havan.</td><td class="px-3 text-gray-500">Reel + Story</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 17</td><td class="px-3 font-semibold">Vastu (P1)</td><td class="px-3 font-hindi">Boardroom seating Vastu — power chair vs creative chair.</td><td class="px-3 text-gray-500">FB Group Value Post</td></tr>
+              <tr class="calendar-row" data-pillar="P2"><td class="py-2 px-3 font-bold text-[#135e43]">Day 18</td><td class="px-3 font-semibold">Mythbuster (P2)</td><td class="px-3 font-hindi">Mukhaghat ka darr — 40 saal purana myth debunked.</td><td class="px-3 text-gray-500">Short + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 19</td><td class="px-3 font-semibold">Stage Clip (P3)</td><td class="px-3 font-hindi">Audience breakthrough moment live from Raipur conclave.</td><td class="px-3 text-gray-500">Reel + Testimonial</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 20</td><td class="px-3 font-semibold">Economist (P1)</td><td class="px-3 font-hindi">Dhanteras — sone ka 10 saal ka cycle pattern.</td><td class="px-3 text-gray-500">IG Carousel</td></tr>
+              <tr class="calendar-row" data-pillar="P4"><td class="py-2 px-3 font-bold text-[#135e43]">Day 21</td><td class="px-3 font-semibold">SOIL BTS (P4)</td><td class="px-3 font-hindi">Day 5–6: Silver inclusion & solar/lunar energization.</td><td class="px-3 text-gray-500">Reel (Money Shot)</td></tr>
+              <tr class="calendar-row" data-pillar="Manifesto"><td class="py-2 px-3 font-bold text-[#135e43]">Day 22</td><td class="px-3 font-semibold">Brand Film</td><td class="px-3 font-hindi">Manifesto: "Hum darna nahi sikhate. Pattern samajhna sikhate hain."</td><td class="px-3 text-gray-500">Boosted Master Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 23</td><td class="px-3 font-semibold">Stage Clip (P3)</td><td class="px-3 font-hindi">1,000 CXO desks — main unhe pehli meeting mein kya bolta hoon.</td><td class="px-3 text-gray-500">LinkedIn / Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 24</td><td class="px-3 font-semibold">Signature Audit (P1)</td><td class="px-3 font-hindi">Corporate logo mein chhupi 3 fatal geometrical galtiyan.</td><td class="px-3 text-gray-500">Short + Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 25</td><td class="px-3 font-semibold">Long-Form Flagship</td><td class="px-3 font-bold text-purple-800 font-hindi">Vastu for Offices — The Engineer's Method (No Demolition, 10 min).</td><td class="px-3 text-gray-500">YouTube Flagship #2</td></tr>
+              <tr class="calendar-row" data-pillar="P4"><td class="py-2 px-3 font-bold text-[#135e43]">Day 26</td><td class="px-3 font-semibold">SOIL BTS (P4)</td><td class="px-3 font-hindi">Day 7: Engraved wooden box reveal & dispatch certificate.</td><td class="px-3 text-gray-500">UGC Unbox Video</td></tr>
+              <tr class="calendar-row" data-pillar="P2"><td class="py-2 px-3 font-bold text-[#135e43]">Day 27</td><td class="px-3 font-semibold">Mythbuster (P2)</td><td class="px-3 font-hindi">Astrologers jo 11 lakh maangte hain — unka psychological pattern.</td><td class="px-3 text-gray-500">High-Share Reel</td></tr>
+              <tr class="calendar-row" data-pillar="P3"><td class="py-2 px-3 font-bold text-[#135e43]">Day 28</td><td class="px-3 font-semibold">Stage Clip (P3)</td><td class="px-3 font-hindi">21-Day Habit Challenge — Din 1: 2-minute morning energy switch.</td><td class="px-3 text-gray-500">Challenge Kickoff</td></tr>
+              <tr class="calendar-row" data-pillar="P1"><td class="py-2 px-3 font-bold text-[#135e43]">Day 29</td><td class="px-3 font-semibold">Economist (P1)</td><td class="px-3 font-hindi">January mein markets ko kya rule karta hai? Planetary cycle review.</td><td class="px-3 text-gray-500">FB Live Q&A (30m)</td></tr>
+              <tr class="calendar-row" data-pillar="Community"><td class="py-2 px-3 font-bold text-[#135e43]">Day 30</td><td class="px-3 font-semibold">Recap & Audit</td><td class="px-3 font-hindi">30 din, 30 patterns — kaunsa video aapka favorite tha?</td><td class="px-3 text-gray-500">Community Poll</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 20 Viral Hook Bank with One-Click Copy -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-3">
+          <div>
+            <h3 class="font-serif-royal text-lg font-bold text-[#091510] flex items-center gap-2">
+              <i data-lucide="copy" class="w-5 h-5 text-[#c59b27]"></i> 20 वायरल ओपनिंग हुक बैंक (Ready to Record Hook Bank)
+            </h3>
+            <p class="text-xs text-gray-500 font-hindi">शॉर्ट्स और रील्स के पहले 3 सेकंड में अधिकतम व्यूअर रिटेंशन के लिए तैयार हुक्स।</p>
+          </div>
+          <input type="text" id="hookSearchInput" placeholder="हुक खोजें..." class="px-3 py-1.5 text-xs rounded-xl border border-gray-300 focus:outline-none focus:border-[#135e43]">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="hooksContainer">
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Yeh galti har Indian flat mein hai — aur iska fix ₹0 hai."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Yeh galti har Indian flat mein hai — aur iska fix ₹0 hai."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Main economist hoon. Isliye aapki kundali main alag tarah se padhta hoon."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Main economist hoon. Isliye aapki kundali main alag tarah se padhta hoon."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Budget aane se 10 din pehle — chart mein jo dikha, wo yeh tha."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Budget aane se 10 din pehle — chart mein jo dikha, wo yeh tha."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Saturn crash se pehle hamesha yeh 3 cheezein karta hai (pattern, prediction nahi)."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Saturn crash se pehle hamesha yeh 3 cheezein karta hai (pattern, prediction nahi)."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Aankh band karo. 10 second. Bas itna hi karo aur batao kya hua."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Aankh band karo. 10 second. Bas itna hi karo aur batao kya hua."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Aapki salary aapke signature se leak ho rahi hai — 3 lines mein fix."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Aapki salary aapke signature se leak ho rahi hai — 3 lines mein fix."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"Jitne bhi astrologers aapko 11 lakh ka upay dikhayenge — yeh pattern pehchano pehle."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="Jitne bhi astrologers aapko 11 lakh ka upay dikhayenge — yeh pattern pehchano pehle."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+          <div class="hook-item p-3 bg-gray-50 rounded-2xl border border-gray-200 flex justify-between items-center gap-3">
+            <span class="text-xs text-gray-800 font-medium font-hindi">"SOIL banane ka din 1. Yeh dekh kar aap bhi maangoge."</span>
+            <button class="btn-copy p-1.5 rounded-lg bg-white border border-gray-300 hover:bg-gray-100 text-gray-600" data-copy="SOIL banane ka din 1. Yeh dekh kar aap bhi maangoge."><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 5: OPERATIONS & WHATSAPP FUNNEL -->
+    <!-- ========================================================================= -->
+    <section id="tab-operations" class="tab-pane hidden space-y-8">
+      
+      <!-- 5-Path WhatsApp Funnel Architecture -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
+        <div class="border-b border-gray-100 pb-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5 text-[#135e43]"></i> व्हाट्सएप 5-पाथ स्वचालित फ़नल (+91 90396 10001)
+            </h3>
+            <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2.5 py-1 rounded font-hindi">सर्वाधिक ROI वाला माध्यम</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1 font-hindi">इंस्टाग्राम, यूट्यूब, वेबसाइट और इवेंट्स से आने वाले हर यूजर को इस ऑटोमेशन द्वारा प्रोसेस किया जाता है।</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="text-xs font-bold text-amber-700">Path 1: SOIL</span>
+            <h4 class="font-bold text-xs text-[#091510]">Spiritual Oil Orders</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">7-दिवसीय गाइड व वीडियो भेजें। जन्म विवरण लें ➔ मानव डेस्क ऑर्डर व डिस्पैच पूरा करे।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="text-xs font-bold text-emerald-700">Path 2: Consult</span>
+            <h4 class="font-bold text-xs text-[#091510]">Kundali & Vastu</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">3-टीयर मेनू भेजें। जन्म विवरण लें ➔ स्लॉट पुष्टि के लिए कैलेंडली लिंक शेयर करें।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="text-xs font-bold text-blue-700">Path 3: E.Y.E.</span>
+            <h4 class="font-bold text-xs text-[#091510]">Keynote Bookings</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">ब्रोशर + कॉन्क्लेव रील भेजें। तारीख और क्षमता के आधार पर कस्टमाइज्ड कोटेशन जारी करें।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-purple-300 bg-purple-50/50 space-y-2">
+            <span class="text-xs font-bold text-purple-700">Path 4: CXO (NDA)</span>
+            <h4 class="font-bold text-xs text-purple-900">Promoter Advisory</h4>
+            <p class="text-[11px] text-purple-800 font-hindi">"गोपनीय डेस्क: संदेश 2 घंटे में डॉ. पटनी को जाएगा" ➔ सीधे फाउंडर को प्रायोरिटी अलर्ट।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <span class="text-xs font-bold text-gray-600">Path 5: Support</span>
+            <h4 class="font-bold text-xs text-[#091510]">General Inquiries</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">शिपिंग, पता परिवर्तन और सामान्य मीडिया पूछताछ के लिए टीम ऑपरेटर को रूट करें।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Funnel Drop-off Chart & SEO Volume Chart -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Funnel Flow Horizontal Bar -->
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="filter" class="w-4 h-4 text-[#135e43]"></i> मासिक मार्केटिंग एवं व्हाट्सएप रूपांतरण फ़नल
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">इम्प्रेशन से लेकर रिटेनर क्लाइंट तक का प्रवाह (लॉग स्केल)</p>
+            </div>
+          </div>
+          <div class="h-80">
+            <canvas id="funnelConversionChart"></canvas>
+          </div>
+        </div>
+
+        <!-- SEO Keywords Bar -->
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="search" class="w-4 h-4 text-[#c59b27]"></i> टॉप सर्च कीवर्ड्स एवं मासिक वॉल्यूम (SEO Matrix)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">भारत में गूगल पर सर्च किए जाने वाले मुख्य विषय</p>
+            </div>
+          </div>
+          <div class="h-80">
+            <canvas id="seoKeywordChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Email Sequences & Crisis Playbook -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-[#c59b27]"></i> 4 स्वचालित ईमेल नर्चर सीरीज़ (Email Sequences)
+          </h3>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-[#091510]">
+                <span>Sequence A: SOIL Prospect</span>
+                <span class="text-[#135e43]">6 Emails · 14 Days</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">गाइड डाउनलोड करने वालों को ₹11,999 सैंक्चुअरी किट खरीदने के लिए अनुष्ठान विज्ञान द्वारा तैयार करना।</p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-[#091510]">
+                <span>Sequence B: E.Y.E. Keynote Leads</span>
+                <span class="text-[#135e43]">4 Emails · 30 Days</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">इवेंट आयोजकों और समाज के प्रमुखों को 12-टूल पीडीएफ भेजकर की-नोट की बुकिंग पक्की करना।</p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-[#091510]">
+                <span>Sequence C: CXO Mentoring Inbound</span>
+                <span class="text-[#135e43]">5 Emails · 60 Days</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">कॉस्मिक फाइनेंस रिसर्च पेपर साझा कर ₹3L–₹6L का 6-महीने का मेंटरिंग रिटेनर हासिल करना।</p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-[#091510]">
+                <span>Sequence D: Mantrovation Monthly</span>
+                <span class="text-[#135e43]">Monthly Newsletter</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">मासिक ग्रह चक्र समीक्षा, ₹0 मिथक-नाशक टिप्स, SOIL अनुष्ठान अपडेट्स और आगामी कार्यक्रम।</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-red-600"></i> संकट प्रबंधन प्रोटोकॉल (Crisis Management SOP)
+          </h3>
+          <div class="space-y-3">
+            <div class="p-3 rounded-2xl bg-red-50/60 border border-red-200">
+              <div class="flex justify-between text-xs font-bold text-red-900">
+                <span>1. वायरल नेगेटिव / ट्रोल अटैक</span>
+                <span class="text-red-700">&lt; 2 घंटे</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">1,000+ CXO डेस्क और 2 मुख्यमंत्रियों के अवॉर्ड्स का हवाला देते हुए शांत व तथ्यात्मक खंडन जारी करें।</p>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-amber-50/60 border border-amber-200">
+              <div class="flex justify-between text-xs font-bold text-amber-900">
+                <span>2. SOIL पेटेंट पर सवाल</span>
+                <span class="text-amber-700">&lt; 24 घंटे</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">वेबसाइट पर पेटेंट आवेदन संख्या और हर्बल फॉर्मूलेशन की वैज्ञानिक रिसर्च शीट प्रकाशित करें।</p>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-gray-900">
+                <span>3. अन्य ज्योतिषी का स्कैम समाचार</span>
+                <span class="text-gray-700">&lt; 4 घंटे</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">भवदीय मंच को 'सुधारक' के रूप में पेश करें। "हम डर नहीं बेचते" का आधिकारिक मैनिफेस्टो जारी करें।</p>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-gray-50 border border-gray-200">
+              <div class="flex justify-between text-xs font-bold text-gray-900">
+                <span>4. फाउंडर समय संकट (Overload)</span>
+                <span class="text-gray-700">तत्काल</span>
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1 font-hindi">4-6 सप्ताह का कंटेंट बफर पहले से शूट करें। स्टैंडर्ड-लाइट (3 पोस्ट/हफ्ते) पर स्विच करें।</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 6: PROPRIETARY STRATEGIC ANGLES & ENTERPRISE MOATS -->
+    <!-- ========================================================================= -->
+    <section id="tab-strategic" class="tab-pane hidden space-y-8">
+      
+      <div class="border-b border-gray-200 pb-4">
+        <h2 class="font-serif-royal text-2xl font-bold text-[#091510] flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-6 h-6 text-[#c59b27]"></i> 8 विशिष्ट रणनीतिक सूत्र एवं एंटरप्राइज सुरक्षा कवच
+        </h2>
+        <p class="text-xs text-gray-500 mt-1 font-hindi">डॉ. आशीष पटनी के व्यवसाय को ₹10Cr+ स्तर पर ले जाने के अनूठे रणनीतिक मॉडल।</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#135e43] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#135e43] text-white font-bold text-xs">01</span>
+            <h3 class="font-bold text-sm text-[#091510]">"Expense-Account" कॉर्पोरेट क्रोनोबायोलॉजी पोजिशनिंग</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समस्या:</strong> फॉर्च्यून 500 कंपनियां 'Astrology' नाम से बिल पास नहीं कर सकतीं।<br>
+            <strong>समाधान:</strong> एंटरप्राइज इनवॉइस <em>"Executive Cognitive Optimization & Temporal Risk Advisory"</em> नाम से जारी होंगे। इससे बड़ी टेक कंपनियों और लिस्टेड फर्म्स के बजट अनलॉक होते हैं।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#c59b27] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#c59b27] text-white font-bold text-xs">02</span>
+            <h3 class="font-bold text-sm text-[#091510]">SOIL का औद्योगिकीकरण: "मास्टर परफ्यूमर" बैच मॉडल</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समस्या:</strong> 500–1000 किट/माह होने पर आप खुद हर शीशी को 7 दिन सिद्ध नहीं कर पाएंगे।<br>
+            <strong>समाधान:</strong> डॉ. पटनी 27 नक्षत्रों के त्रैमासिक 'मदर टिंचर' तैयार करेंगे। प्रशिक्षित वैदिक टीम सख्त एसओपी के तहत होरा ब्लेंडिंग करेगी और क्यूआर कोड वाला प्रमाण पत्र साथ जाएगा।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#135e43] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#135e43] text-white font-bold text-xs">03</span>
+            <h3 class="font-bold text-sm text-[#091510]">अकादमिक सुरक्षा: बिहेवियरल फाइनेंस धुरी (Psychology Pivot)</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समस्या:</strong> संशयवादी यूट्यूबर भविष्यवाणियों को अंधविश्वास कह सकते हैं।<br>
+            <strong>समाधान:</strong> कॉस्मिक फाइनेंस को <em>"निवेशक मनोविज्ञान, बायोरिदम और मैक्रोइकॉनॉमिक साइकिल्स"</em> के रूप में पेश करें। निफ्टी-50 का 20-वर्षीय चंद्र-चक्र बैकटेस्ट अध्ययन ओपन-सोर्स प्रकाशित करें।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#c59b27] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#c59b27] text-white font-bold text-xs">04</span>
+            <h3 class="font-bold text-sm text-[#091510]">उच्च-संपदा व्यापारिक गलियारों व सीए (CA) नेटवर्क में विस्तार</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समाधान:</strong> भारत डायमंड बोर्स (BKC मुंबई), सूरत डायमंड बोर्स, एंटवर्प व दुबई के हीरा व्यापारियों तथा ICAI/ICSI सम्मेलनों को लक्षित करें। सीए को जीत लिया तो प्रमोटर परिवार आपका हो गया!
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#135e43] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#135e43] text-white font-bold text-xs">05</span>
+            <h3 class="font-bold text-sm text-[#091510]">फैमिली ऑफिस उत्तराधिकार एवं बोर्डरूम गवर्नेंस रिटेनर</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समाधान:</strong> ₹15L–₹35L/वर्ष का फैमिली ऑफिस रिटेनर पैकेज करें: पीढ़ियों के बीच सत्ता हस्तांतरण के समय बोर्ड सदस्यों की कुंडली का तालमेल, एम एंड ए टाइमिंग व इंडस्ट्रियल वास्तु। (10 परिवार = ₹2Cr+ ARR)।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#c59b27] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#c59b27] text-white font-bold text-xs">06</span>
+            <h3 class="font-bold text-sm text-[#091510]">Bhavishyam Executive Portal (SaaS सॉफ्टवेयर एसेट)</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समाधान:</strong> ब्लूमबर्ग/नोशन ग्रेड का एग्जीक्यूटिव डेली डिसीजन पोर्टल। महत्वपूर्ण अनुबंधों और नियुक्तियों के लिए ग्रीन/एम्बर/रेड समय खिड़कियां। ₹14,999/वर्ष सब्सक्रिप्शन से टेक वैल्यूएशन बनती है।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#135e43] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#135e43] text-white font-bold text-xs">07</span>
+            <h3 class="font-bold text-sm text-[#091510]">एंटी-गुरु विजुअल व सोनिक पहचान (The Central Banker Look)</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>समाधान:</strong> कोई भगवा चोला या चमकीले ग्राफिक्स नहीं। सिलवाया गया लिनन ब्लेजर, डार्क-वुड लाइब्रेरी, पीतल की प्राचीन तराजू, आईपैड चक्र चार्ट्स और एक शांत, गंभीर बैंकर जैसी संतुलित आवाज।
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-3 hover:border-[#c59b27] transition">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-[#c59b27] text-white font-bold text-xs">08</span>
+            <h3 class="font-bold text-sm text-[#091510]">3-वर्षीय एंटरप्राइज विकास रोडमैप (3-Year Scale)</h3>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed font-hindi">
+            <strong>साल 1:</strong> बेसलाइन स्थिरीकरण (की-नोट्स + SOIL D2C)।<br>
+            <strong>साल 2:</strong> डिजिटल स्केल व कॉर्पोरेट रिटेनर्स (40% प्रोडक्ट)।<br>
+            <strong>साल 3:</strong> संस्थागत एकाधिकार (75% प्रोडक्ट व SaaS, 25% हाई-टिकट)।
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 7: FINANCIAL MODELS, PRICING & ROI SIMULATOR -->
+    <!-- ========================================================================= -->
+    <section id="tab-financials" class="tab-pane hidden space-y-8">
+      
+      <!-- Interactive Financial Simulator -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-serif-royal text-xl font-bold text-[#091510]">इंटरैक्टिव रेवेन्यू एवं ROI सिम्युलेटर</h3>
+              <span id="calcScenarioBadge" class="px-3 py-1 text-xs font-bold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">Target Base Plan</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 font-hindi">की-नोट्स, SOIL बिक्री और रिटेनर्स को बदलकर तुरंत वास्तविक समय का शुद्ध लाभ देखें।</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-bold text-gray-600 font-hindi">खर्च टीयर:</label>
+            <select id="calcOpexTier" class="calc-input px-3 py-1.5 text-xs rounded-xl border border-gray-300 bg-white font-bold text-[#091510]">
+              <option value="lean">Lean Tier (₹12L OpEx)</option>
+              <option value="standard" selected>Standard Tier (₹56.5L OpEx - अनुशंसित)</option>
+              <option value="aggressive">Aggressive Tier (₹105L OpEx)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sliders Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#091510]">
+              <span>वार्षिक की-नोट्स संख्या</span>
+              <span id="valKeynotesCount" class="text-[#135e43]">35</span>
+            </div>
+            <input type="range" id="calcKeynotesCount" class="calc-input w-full accent-[#135e43]" min="10" max="80" value="35">
+            <div class="flex justify-between text-[11px] text-gray-500">
+              <span>औसत फीस / की-नोट:</span>
+              <span id="valKeynotesAvgFee" class="font-bold text-[#091510]">₹3.0 Lakhs</span>
+            </div>
+            <input type="range" id="calcKeynotesAvgFee" class="calc-input w-full accent-[#135e43]" min="1.0" max="10.0" step="0.5" value="3.0">
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#091510]">
+              <span>मासिक SOIL किट बिक्री</span>
+              <span id="valSoilMonthlyUnits" class="text-[#c59b27]">60 kits/mo (720/yr)</span>
+            </div>
+            <input type="range" id="calcSoilMonthlyUnits" class="calc-input w-full accent-[#c59b27]" min="10" max="300" step="5" value="60">
+            <div class="flex justify-between text-[11px] text-gray-500">
+              <span>औसत टिकट / किट:</span>
+              <span id="valSoilAvgPrice" class="font-bold text-[#091510]">₹11,999</span>
+            </div>
+            <input type="range" id="calcSoilAvgPrice" class="calc-input w-full accent-[#c59b27]" min="4999" max="24999" step="1000" value="11999">
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#091510]">
+              <span>CXO रिटेनर क्लाइंट्स</span>
+              <span id="valCxoClients" class="text-purple-700">8 Clients</span>
+            </div>
+            <input type="range" id="calcCxoClients" class="calc-input w-full accent-purple-700" min="2" max="20" value="8">
+            <div class="flex justify-between text-[11px] text-gray-500">
+              <span>रिटेनर फीस / क्लाइंट:</span>
+              <span id="valCxoRetainerFee" class="font-bold text-[#091510]">₹3.5 Lakhs</span>
+            </div>
+            <input type="range" id="calcCxoRetainerFee" class="calc-input w-full accent-purple-700" min="1.0" max="10.0" step="0.5" value="3.5">
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#091510]">
+              <span>कॉर्पोरेट वास्तु ऑडिट्स</span>
+              <span id="valVastuProjects" class="text-[#135e43]">6 Audits</span>
+            </div>
+            <input type="range" id="calcVastuProjects" class="calc-input w-full accent-[#135e43]" min="1" max="25" value="6">
+            <div class="flex justify-between text-[11px] text-gray-500">
+              <span>औसत फीस / प्रोजेक्ट:</span>
+              <span id="valVastuAvgFee" class="font-bold text-[#091510]">₹3.0 Lakhs</span>
+            </div>
+            <input type="range" id="calcVastuAvgFee" class="calc-input w-full accent-[#135e43]" min="1.0" max="8.0" step="0.5" value="3.0">
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+            <div class="flex justify-between text-xs font-bold text-[#091510]">
+              <span>स्टैंडर्ड कंसल्टेशन्स / वर्ष</span>
+              <span id="valStandardConsults" class="text-blue-700">300 Clients</span>
+            </div>
+            <input type="range" id="calcStandardConsults" class="calc-input w-full accent-blue-700" min="50" max="1000" step="25" value="300">
+            <div class="flex justify-between text-[11px] text-gray-500">
+              <span>औसत टिकट:</span>
+              <span id="valConsultAvgFee" class="font-bold text-[#091510]">₹9,000</span>
+            </div>
+            <input type="range" id="calcConsultAvgFee" class="calc-input w-full accent-blue-700" min="3000" max="21000" step="1000" value="9000">
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="p-5 rounded-2xl bg-[#091510] text-white flex flex-col justify-between shadow-xl border border-[#c59b27]">
+            <div>
+              <div class="text-[11px] font-bold text-[#e8c046] uppercase tracking-wider">सिम्युलेटेड शुद्ध लाभ (Net Profit)</div>
+              <div id="calcOutNetProfit" class="text-3xl font-extrabold text-white mt-1 font-heading">₹1.20 Cr</div>
+              <div id="calcOutNetProfitLakhs" class="text-xs text-gray-300 font-medium">₹120.4 Lakhs (57.3% Net Margin)</div>
+            </div>
+            <div class="border-t border-gray-700 pt-3 mt-3 flex justify-between items-center text-xs">
+              <div>
+                <span class="text-gray-400">कुल आय:</span>
+                <strong id="calcOutRevenue" class="text-[#e8c046] ml-1">₹2.10 Cr</strong>
+              </div>
+              <div id="calcOutROI" class="font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">3.4× Digital ROI</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Charts: Revenue Doughnut & Quarterly Cash Flow -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-[#135e43]"></i> अनुमानित रेवेन्यू ब्रेकडाउन (₹2.10 Cr Total)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">6 मुख्य स्रोतों से प्राप्त आय</p>
+            </div>
+            <span class="text-xs font-bold text-[#c59b27] bg-[#fbf6e8] px-2 py-0.5 rounded">Standard Model</span>
+          </div>
+          <div class="h-72">
+            <canvas id="revenuePieChart"></canvas>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <div>
+              <h3 class="font-bold text-base text-[#091510] flex items-center gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-[#c59b27]"></i> त्रैमासिक कैश फ्लो व शुद्ध लाभ (Q1–Q4 Waterfall)
+              </h3>
+              <p class="text-xs text-gray-500 font-hindi">Q1–Q4 रेवेन्यू बनाम खर्च बनाम शुद्ध लाभ (₹ लाख में)</p>
+            </div>
+            <span class="text-xs font-bold text-[#135e43] bg-emerald-50 px-2 py-0.5 rounded">+₹153.5L Cum. Cash</span>
+          </div>
+          <div class="h-72">
+            <canvas id="quarterlyCashFlowChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3 Execution Budget Tiers -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="border-b border-gray-100 pb-3">
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="wallet" class="w-5 h-5 text-[#135e43]"></i> 3 निष्पादन निवेश टीयर्स (Execution Investment Tiers)
+          </h3>
+          <p class="text-xs text-gray-500 font-hindi">कैश-फ्लो क्षमता के अनुसार सही निवेश स्तर चुनें।</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-gray-700">Tier 1 · Lean</span>
+              <span class="text-xs font-bold text-gray-900">₹10.5L – ₹12.0L / वर्ष</span>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">फोन शूटिंग किट, 2 टीम सदस्य, न्यूनतम पेड मीडिया (₹8K/माह)। महीने 1–3 में अवधारणा को साबित करने के लिए उपयुक्त।</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#fbf6e8] border-2 border-[#c59b27] space-y-3 shadow-md">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#c59b27] text-white">Tier 2 · Standard (अनुशंसित)</span>
+              <span class="text-xs font-extrabold text-[#091510]">₹35L – ₹50L / वर्ष</span>
+            </div>
+            <p class="text-xs text-gray-700 font-hindi">प्रो मिररलेस स्टूडियो (₹3L), 4 टीम सदस्य (₹20L), ₹50-80K/माह पेड बूस्ट (₹8L), ₹5L पॉडकास्ट वॉर-चेस्ट, पीआर रिटेनर (₹3L)। श्रेणी टॉप-3 की गारंटी।</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-purple-700">Tier 3 · Aggressive</span>
+              <span class="text-xs font-bold text-gray-900">₹95L – ₹1.10 Cr / वर्ष</span>
+            </div>
+            <p class="text-xs text-gray-600 font-hindi">पूर्ण एजेंसी प्रोडक्शन, 6 टीम सदस्य, ₹2L+/माह विज्ञापन, बहु-शहरीय मीडिया कॉन्क्लेव, होर्डिंग्स। बजट के बाद साल 2 में तेजी लाने के लिए।</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 8: MEDIA, PR & COLLAB OUTREACH CRM -->
+    <!-- ========================================================================= -->
+    <section id="tab-media" class="tab-pane hidden space-y-8">
+      
+      <!-- Media Targets Grid -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
+        <div class="border-b border-gray-100 pb-4">
+          <h3 class="font-serif-royal text-xl font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="tv" class="w-5 h-5 text-[#135e43]"></i> राष्ट्रीय ब्रॉडकास्ट एवं प्रिंट मीडिया लक्ष्य
+          </h3>
+          <p class="text-xs text-gray-500 mt-1 font-hindi">बजट सीजन और वर्षभर ऑप-एड के लिए प्राथमिकता वाले टीवी चैनल्स व समाचार पत्र।</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-1">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">Existing Relationship</span>
+            <h4 class="font-bold text-xs text-[#091510] mt-1">ZEE MP/CG & ZEE News</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">#BudgetOnZee पर बहु-वर्षीय पैनलिस्ट। लक्ष्य: 5 मिनट का सोलो मैक्रो विश्लेषण।</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-1">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">National TV Target</span>
+            <h4 class="font-bold text-xs text-[#091510] mt-1">Aaj Tak & NDTV Profit</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">बजट डे स्पेशल पैनल। एंगल: 'बजट आने से पहले चार्ट ने क्या संकेत दिया था।'</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-1">
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-bold">National Print</span>
+            <h4 class="font-bold text-xs text-[#091510] mt-1">Economic Times & BusinessLine</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">ऑप-एड: "Planetary Cycles & Corporate Decision Dynamics".</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-1">
+            <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 text-[10px] font-bold">Hindi Dailies</span>
+            <h4 class="font-bold text-xs text-[#091510] mt-1">Dainik Bhaskar & Patrika</h4>
+            <p class="text-[11px] text-gray-600 font-hindi">फ्रंट-पेज मौसमी फीचर्स (बजट, दिवाली, सावन जीरो-डॉगमा विश्लेषण)।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curated Influencers Grid with Filter -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-3">
+          <div>
+            <h3 class="font-serif-royal text-lg font-bold text-[#091510] flex items-center gap-2">
+              <i data-lucide="users" class="w-5 h-5 text-[#c59b27]"></i> 25+ चयनित इन्फ्लुएंसर कोलाबरेशन डेटाबेस
+            </h3>
+            <p class="text-xs text-gray-500 font-hindi">क्रॉस-नीश पॉडकास्ट और बौद्धिक डिबेट के लिए प्राथमिकता वाले नाम।</p>
+          </div>
+          <select id="influencerLaneFilter" class="px-3 py-1.5 text-xs rounded-xl border border-gray-300 bg-white font-medium">
+            <option value="ALL">सभी श्रेणियां (All Lanes)</option>
+            <option value="Finance">वित्त एवं निवेशक (Finance - Top Priority)</option>
+            <option value="Wellness">वेलनेस एवं योग (Wellness)</option>
+            <option value="Jain">जैन समाज नेटवर्क (Jain Community)</option>
+            <option value="Business">बिजनेस व फाउंडर्स (Business & Founders)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="influencersGrid">
+          
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Finance">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">CA Rachana Ranade</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">5M+ YT</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> डिबेट: "क्या ग्रह चक्रों से पोर्टफोलियो रिस्क को समझा जा सकता है?"</p>
+            <div class="text-[10px] text-[#135e43] font-bold">संभावना: Medium · Finance Lane</div>
+          </div>
+
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Finance">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">Labour Law Advisor</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">5M+ YT</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> व्याख्या: "क्या कॉस्मिक साइकिल्स मार्केट सेंटिमेंट को प्रभावित करते हैं?"</p>
+            <div class="text-[10px] text-[#135e43] font-bold">संभावना: Medium · Finance Lane</div>
+          </div>
+
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Finance">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">Raj Shamani</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">5M+ IG/YT</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> पॉडकास्ट: "MBA Finance से लेकर बोर्डरूम कुंडली पढ़ने तक का सफर।"</p>
+            <div class="text-[10px] text-[#135e43] font-bold">संभावना: High · Founder Lane</div>
+          </div>
+
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Wellness">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">BeerBiceps (Ranveer)</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">10M+ YT</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> पॉडकास्ट: "आधुनिक लीडर्स के लिए प्राचीन वैदिक ऊर्जा प्रणाली।"</p>
+            <div class="text-[10px] text-purple-700 font-bold">संभावना: Medium · Wellness Lane</div>
+          </div>
+
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Jain">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">Jain Mahiladarsh / JITO</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">100K+ Net</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> E.Y.E. की-नोट क्लिप्स एवं SOIL 7-दिवसीय अनुष्ठान का विस्तृत फीचर।</p>
+            <div class="text-[10px] text-amber-800 font-bold">संभावना: Very High · Samaj Lane</div>
+          </div>
+
+          <div class="influencer-card p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2" data-lane="Business">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-xs text-[#091510]">YourStory & Inc42</h4>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">1.5M+ Net</span>
+            </div>
+            <p class="text-[11px] text-gray-600 font-hindi"><strong>प्रारूप:</strong> फाउंडर स्टोरी: "द इकोनॉमिस्ट हू बिल्ट वर्ल्ड्स 1st स्पिरिचुअल ऑयल।"</p>
+            <div class="text-[10px] text-[#135e43] font-bold">संभावना: High · Startup Lane</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TV Pitch Template (Copyable) -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+          <h3 class="font-serif-royal text-lg font-bold text-[#091510] flex items-center gap-2">
+            <i data-lucide="send" class="w-5 h-5 text-[#135e43]"></i> आधिकारिक टीवी बजट सीजन पिच स्क्रिप्ट (Copyable Pitch Template)
+          </h3>
+          <button class="btn-copy px-3.5 py-1.5 rounded-xl bg-[#135e43] text-white text-xs font-bold flex items-center gap-1.5 hover:bg-[#1e7d5a] transition shadow-md" data-copy="Subject: Union Budget 2027 — Expert Panelist Available (Dr. Ashish Patni - Bhavishyam)
+
+Dear Producer,
+
+Dr. Ashish Patni — known as Bhavishyam — is an economist (MBA Finance, MA Economics) and astrologer who has been a Union Budget panelist on ZEE MP/CG for three consecutive years. For Budget 2027, he has prepared a 12-observation analysis linking planetary cycles to economic indicators — a format no other panelist offers.
+
+His unique angle: 'What the chart said before the budget happened' — pattern observations on fiscal cycles, market sentiment shifts, and sectoral timing that complement your economists' analysis with a cultural-pattern layer your audience hasn't seen.
+
+Brief bio: State Gaurav Puraskar from two CMs of Chhattisgarh, Guinness World Record via Life Craft foundation, published research in 'Cosmic Finance,' 100+ E.Y.E. programs across 50+ cities.
+
+Happy to send a 90-second intro clip or schedule a pre-budget briefing call.
+
+Best regards,
+Bhavishyam Media Desk
++91 90396 10001 | bhavishyam.com">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Full Pitch
+          </button>
+        </div>
+
+        <div class="p-4 bg-gray-50 rounded-2xl text-xs text-gray-700 font-mono leading-relaxed border border-gray-200">
+          <strong>Subject:</strong> Union Budget 2027 — Expert Panelist Available (Dr. Ashish Patni - Bhavishyam)<br><br>
+          Dear Producer,<br><br>
+          Dr. Ashish Patni — known as Bhavishyam — is an economist (MBA Finance, MA Economics) and astrologer who has been a Union Budget panelist on ZEE MP/CG for three consecutive years. For Budget 2027, he has prepared a 12-observation analysis linking planetary cycles to economic indicators — a format no other panelist offers.<br><br>
+          His unique angle: 'What the chart said before the budget happened' — pattern observations on fiscal cycles, market sentiment shifts, and sectoral timing that complement your economists' analysis with a cultural-pattern layer your audience hasn't seen.<br><br>
+          Brief bio: State Gaurav Puraskar from two CMs of Chhattisgarh, Guinness World Record via Life Craft foundation, published research in 'Cosmic Finance,' 100+ E.Y.E. programs across 50+ cities.<br><br>
+          Happy to send a 90-second intro clip or schedule a pre-budget briefing call.<br><br>
+          Best regards,<br>
+          Bhavishyam Media Desk | +91 90396 10001 | bhavishyam.com
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Master Executive Footer -->
+  <footer class="bg-[#091510] text-gray-400 py-14 border-t border-[#c59b27]/30 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-[#c59b27] flex items-center justify-center text-[#091510] font-serif-royal font-bold text-lg">
+          भ
+        </div>
+        <span class="font-serif-royal text-xl font-bold text-white tracking-wider">BHAVISHYAM · DR. ASHISH PATNI</span>
+      </div>
+
+      <p class="text-xs max-w-2xl mx-auto text-gray-400 font-light leading-relaxed font-hindi">
+        प्राइवेट एवं गोपनीय मास्टर स्ट्रैटेजी ब्लूप्रिंट। संपूर्ण प्रतिस्पर्धी विश्लेषण, 10-आयामी मैट्रिक्स, वित्तीय यूनिट इकोनॉमिक्स एवं मैक्रो-मार्केट रिसर्च (2026–2034) पर आधारित।
+      </p>
+
+      <!-- Prominent Footer Attributions -->
+      <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <div>
+          Strategic Analysis Authored By: <strong class="text-white text-sm">Aniket Samant</strong>
+        </div>
+        <div class="text-sm font-extrabold text-[#e8c046] flex items-center gap-1.5">
+          Made with <span class="text-red-500">❤️</span> by <a href="https://roasbodhi.in" target="_blank" class="text-white hover:text-[#e8c046] underline decoration-[#c59b27]">RoasBodhi.in</a>
+        </div>
+        <div>
+          Master Strategy Edition · August 2026
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/data.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/calculator.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

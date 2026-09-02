@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ashish Patni (Bhavishyam) — Complete Research Report</title>
+<style>
+  :root{
+    --ink:#16162a; --muted:#5c5c72; --line:#e4e4ef; --bg:#f7f5f0; --card:#fffdf9;
+    --gold:#9a7b2d; --gold-soft:#f3ead3; --accent:#33418f; --green:#1e7d4f; --red:#b3352c; --amber:#a06a00; --navy:#16162a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;padding:0 0 60px}
+  .wrap{max-width:1080px;margin:28px auto;padding:0 18px}
+  header.hero{background:linear-gradient(135deg,#16162a 0%,#26244a 55%,#4a3357 100%);color:#fff;border-radius:16px;padding:34px 32px;margin-bottom:26px}
+  header.hero h1{font-size:25px;letter-spacing:.3px;margin-bottom:6px}
+  header.hero .alias{color:#d9c98a;font-size:15px;font-weight:600;margin-bottom:10px}
+  header.hero p.sub{color:#c9c9e2;font-size:14.5px;max-width:860px}
+  .badges{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px}
+  h2{font-size:19px;margin:34px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--gold-soft);color:var(--ink)}
+  h2 .num{color:var(--gold);margin-right:8px}
+  h3{font-size:15.5px;margin:18px 0 8px;color:#2c2c54}
+  p{font-size:14px;margin-bottom:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px;box-shadow:0 1px 3px rgba(40,30,10,.05)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+  th{background:#f1ecdf;text-align:left;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-bottom:2px solid var(--line)}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .tag{display:inline-block;border-radius:6px;padding:2px 8px;font-size:11.5px;font-weight:600;margin:1px 2px;white-space:nowrap}
+  .tag.ig{background:#fce8f3;color:#a02366}
+  .tag.yt{background:#fdeaea;color:#b3352c}
+  .tag.fb{background:#e6ecfa;color:#24509e}
+  .tag.wa{background:#e6f4ec;color:#1e7d4f}
+  .tag.tv{background:#efe9fb;color:#5b3fa8}
+  .tag.press{background:#f3ead3;color:#7a5c14}
+  .tag.ok{background:#e6f4ec;color:#1e7d4f}
+  .tag.warn{background:#fff3e0;color:#a06a00}
+  .tag.flag{background:#fdeaea;color:#b3352c}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+  .bar-label{width:180px;flex-shrink:0;text-align:right;color:var(--muted)}
+  .bar-track{flex:1;background:#ececdf;border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold),#c9a24a);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:11.5px;font-weight:700;min-width:52px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}.bar-label{width:110px}}
+  .kv{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;font-size:13.5px;margin:10px 0}
+  .kv dt{color:var(--muted);font-weight:600}
+  .kv dd{margin:0}
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .swot div{border-radius:10px;padding:10px 12px;font-size:12.5px}
+  .swot b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+  .swot .s{background:#e6f4ec}.swot .s b{color:var(--green)}
+  .swot .w{background:#fdeaea}.swot .w b{color:var(--red)}
+  .swot .o{background:#e6ecfa}.swot .o b{color:#24509e}
+  .swot .t{background:#fff3e0}.swot .t b{color:var(--amber)}
+  ul,ol{margin:6px 0 10px 20px;font-size:13.5px}
+  li{margin-bottom:5px}
+  .callout{background:var(--gold-soft);border:1px solid #e0d2a8;border-radius:10px;padding:12px 16px;font-size:13.5px;margin:12px 0}
+  .callout.red{background:#fdeaea;border-color:#eec3c0}
+  .callout.blue{background:#e6ecfa;border-color:#c3d0f0}
+  .callout.green{background:#e6f4ec;border-color:#bfe3cf}
+  .small{font-size:12px;color:var(--muted)}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .foot{margin-top:30px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+  @media(max-width:760px){.kpi{grid-template-columns:repeat(2,1fr)}}
+  .kpi .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .v{font-size:20px;font-weight:800;color:var(--gold)}
+  .kpi .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .pill{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12.5px}
+  .pill b{display:block;font-size:13px}
+  .verdict{border-left:4px solid var(--gold);background:#fffdf9;border-radius:0 12px 12px 0;padding:14px 18px;margin:14px 0;font-size:14px}
+</style>
+<script src="/js/nav.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="alias">भविष्यम् · "BHAVISHYAM"</div>
+  <h1>Dr. Ashish Patni — Complete Research Report</h1>
+  <p class="sub">Deep-dive profile of Dr. Ashish Patni, the Chhattisgarh-based economist-astrologer and keynote speaker who markets himself as "Bhavishyam." Covers identity, brand architecture, credentials &amp; awards (with verification status), products (E.Y.E., SOIL), services, digital footprint, business model, competitive positioning vs the top 6 social-first astro-creators, SWOT, and a risk assessment. Compiled <b>30 August 2026</b>. Primary source: his own brand site (bhavishyam.com, v4), his YouTube/Instagram, and third-party press — all claims attributed and flagged where unverifiable.</p>
+  <div class="badges">
+    <span class="badge">Raipur · Indore · Mumbai</span>
+    <span class="badge">Economist + Astrologer hybrid</span>
+    <span class="badge">B2B keynote model</span>
+    <span class="badge">Guinness-linked (org.)</span>
+    <span class="badge">2x CM state awards</span>
+    <span class="badge">IG ~6.9K · YT small</span>
+  </div>
+</header>
+
+<!-- ============ 1. EXEC SUMMARY ============ -->
+<h2><span class="num">1</span>Executive Summary</h2>
+<div class="kpi">
+  <div class="box"><div class="v">100+</div><div class="l">Programs conducted (claimed)</div></div>
+  <div class="box"><div class="v">50+</div><div class="l">Cities on tour (claimed)</div></div>
+  <div class="box"><div class="v">1,000+</div><div class="l">Promoter/CXO desks (claimed)</div></div>
+  <div class="box"><div class="v">6.9K</div><div class="l">Instagram followers (actual)</div></div>
+</div>
+<div class="card">
+<ul>
+  <li><b>Who he is:</b> Dr. Ashish Patni (MBA Finance, MA Economics) is a Chhattisgarh-based <b>economist turned astrologer/speaker</b>, branded as <b>"Bhavishyam"</b>. He positions at the intersection of economics, Vedic astrology, Vastu, mantra science and herbal (birth-chart) formulations — a "scientific spirituality, zero dogma" hybrid nobody else in the Indian astro market occupies.</li>
+  <li><b>He is NOT a social-media creator.</b> His digital footprint is tiny relative to the top social-first astro-creators (IG <b>6,868</b> followers vs 648K–7M for peers; YouTube a small low-view channel). His real "reach" is <b>offline B2B</b>: 100+ keynotes, 50+ cities, Lions/Rotary/Inner Wheel/JITO/Jain samaj/corporate conclaves, plus TV (ZEE MP/CG budget panels) and national/regional print (Patrika, Dainik Bhaskar, Navbharat, Hitavada).</li>
+  <li><b>Credentials stack is his moat:</b> state awards from <b>both</b> Chhattisgarh CMs (Dr. Raman Singh — BJP era; Bhupesh Baghel — Congress era, at the ZEE MP/CG conclave), a Guinness World Record via his <b>Life Craft foundation</b> (non-stop spiritual/Jain bhajan marathon), titles from Bhartiya Jyotish Vidyapeeth ("Jyotish Maharshi") and Shri Shankaracharya University ("Gyan Chakshu"), a Jain Mahiladarsh magazine <b>cover feature</b>, and a public blessing from Jagadguru Shankaracharya (Swaroopanand Saraswati).</li>
+  <li><b>Product ladder is unusually productized:</b> (1) <b>E.Y.E.</b> — Explore Your Energy, his 90-min flagship keynote with a 12-dimension "energy toolkit"; (2) <b>SOIL</b> — "world's 1st Spiritual Oil," individually formulated per DOB/Nakshatra/Rashi with a 7-day activation ritual, pure-silver inclusion and wooden keepsake box (4 formulations); (3) services — Kundali/Nakshatra analysis, demolition-free Technical Vastu (home + corporate + industrial), mantra therapy, signature &amp; logo analysis; (4) top of funnel — <b>1-on-1 confidential mentoring for promoters/CXOs under NDA</b>, sold via a direct WhatsApp desk. Pricing is never published.</li>
+  <li><b>Research halo:</b> a 2026 paper, "Cosmic Finance: Investigating the Influence of Planetary Cycles on Equity Market Behaviour," in the <i>Journal of Informatics Education and Research</i> (Vol. 6, Issue 1) — branded as "world-first ABDC-indexed." He also gives <b>Union Budget analysis on TV</b>, an economist credibility no other astrologer markets. <i>Verification caveat: the journal is low-profile; treat academic claims as unverified.</i></li>
+  <li><b>Risk flags:</b> the Guinness record belongs to the <i>organization</i> (Life Craft), not him personally, though the site markets him as "record holder"; SOIL is called "patented" with no patent number shown; SOIL's benefit list (anti-anxiety, aura, chakra activation) brushes therapeutic-claims regulation; most testimonials are self-published; "12 years of research" and celebrity/political client claims are inherently unverifiable (NDA).</li>
+  <li><b>Bottom line:</b> a credible, regionally-established <b>speaker-economy</b> player with real external validation (state awards, national press, TV, magazine cover) but a <b>negligible digital audience</b>. He competes for C-suite budgets and event calendars, not for Instagram attention. For a brand: buy him for authority + event audiences, not reach.</li>
+</ul>
+</div>
+
+<!-- ============ 2. IDENTITY ============ -->
+<h2><span class="num">2</span>Identity Snapshot</h2>
+<div class="card">
+<dl class="kv">
+  <dt>Known as</dt><dd>Dr. Ashish Patni — marketed as <b>"Bhavishyam" (भविष्यम्)</b></dd>
+  <dt>Self-stated titles</dt><dd>Economist · Celebrity Astrologer &amp; Vastu Practitioner · Energy &amp; Aura Researcher · Spiritual Researcher · Author/Columnist · Life Mentor · Spiritual Orator · "Mantrovational Speaker" · Inventor of SOIL</dd>
+  <dt>Education</dt><dd>MBA (Finance), MA (Economics) — per his about page</dd>
+  <dt>Base</dt><dd>Raipur (Chhattisgarh, home state — office there) · Indore · Mumbai</dd>
+  <dt>Experience claim</dt><dd>"Over two decades of public intellectual leadership" (media page); "12 years of research" behind Mantrovation (Patrika feature)</dd>
+  <dt>Organization</dt><dd><b>Bhavishyam</b> (founder &amp; chief mentor) + <b>Life Craft Global Foundation</b> (Guinness record vehicle); described as a social-help group for poor, special children, elderly, widows</dd>
+  <dt>Lineage claim</dt><dd>States he learned under a guru lineage; received public blessing from Jagadguru Shankaracharya Swami Shri Swaroopanand Saraswati Ji Maharaj, to whom he presented his Vedic research</dd>
+  <dt>Brand line</dt><dd>"Vedic Logic · Zero Dogma · Mantrovation · Cosmic Finance · Cycle Clarity" — tagline: "Clarity · Energy · Purpose"</dd>
+  <dt>Core framework</dt><dd><b>Person – Space – Practice</b> (individual birth parameters → spatial/Vastu environment → mantra/meditation/herbal practice)</dd>
+  <dt>Public phone/WhatsApp</dt><dd>+91 90396 10001 (all site CTAs route here)</dd>
+</dl>
+<div class="callout blue"><b>Positioning one-liner:</b> "The economist who reads charts" — ancient Indian knowledge interpreted for modern executive decisions, with a hard-line "no fear-based predictions, no blind belief, no fake rituals" stance that deliberately separates him from the remedy/fear-based mass market (Askin-style content is the opposite of his brand).</div>
+</div>
+
+<!-- ============ 3. CREDENTIALS ============ -->
+<h2><span class="num">3</span>Credentials, Awards &amp; Honors (with verification status)</h2>
+<div class="card" style="overflow-x:auto">
+<table>
+  <tr><th>Credential</th><th>Granted by</th><th>Verification status</th></tr>
+  <tr><td>Guinness World Record — <b>Non-stop spiritual/religious/Jain song marathon</b></td><td>Guinness, via <b>Life Craft foundation / Team Life Craft</b></td><td><span class="tag ok">Externally documented</span> on bhavishyam.com/about-us page with record text. <span class="tag warn">Note:</span> record belongs to the <i>organization</i>; site markets him personally as "Guinness Record Holder."</td></tr>
+  <tr><td>State Gaurav Puraskar</td><td>CM of Chhattisgarh, <b>Dr. Raman Singh</b> (BJP era)</td><td><span class="tag ok">Stated, award photo on site</span> — cross-party honor (see below)</td></tr>
+  <tr><td>State Icon Award / State Felicitation at ZEE MP/CG Navbharat Conclave</td><td>CM of Chhattisgarh, <b>Bhupesh Baghel</b> (Congress era)</td><td><span class="tag ok">Award photo on site</span> — being honored by <b>two successive CMs of different parties</b> is strong evidence of genuine regional establishment standing</td></tr>
+  <tr><td>"Won Chief Minister award two years consecutively" (Bhavishyam)</td><td>Chhattisgarh state</td><td><span class="tag warn">Self-stated</span> in Hindi about-text; consistent with the two CM honors above</td></tr>
+  <tr><td>Jyotish Maharshi Upadhi</td><td>Bhartiya Jyotish Vidyapeeth</td><td><span class="tag warn">Self-reported</span> (title bodies in this space vary in rigor)</td></tr>
+  <tr><td>Gyan Chakshu Upadhi</td><td>Shri Shankaracharya University</td><td><span class="tag warn">Self-reported</span></td></tr>
+  <tr><td>Paramhans State Award</td><td>State (for SOIL/birth-Nakshatra herbal work)</td><td><span class="tag warn">Self-reported</span></td></tr>
+  <tr><td>"Big Name of the State" — Super Occult Science category</td><td>Patrika Group (Chhattisgarh daily)</td><td><span class="tag ok">Plausible/press-backed</span> — he is otherwise a regular Patrika feature</td></tr>
+  <tr><td>Jain Gyan Ratna</td><td>Jain Mahila Mahasabha, Delhi</td><td><span class="tag ok">Plausible</span> — consistent with his Jain community work (Life Craft Jain bhajan record, JITO tours)</td></tr>
+  <tr><td>Jagadguru Shankaracharya blessing + research presentation</td><td>Swami Shri Swaroopanand Saraswati Ji Maharaj</td><td><span class="tag ok">Photo on site</span> — high-value social proof if authentic</td></tr>
+  <tr><td>Research paper: "Cosmic Finance: Investigating the Influence of Planetary Cycles on Equity Market Behaviour"</td><td>Journal of Informatics Education and Research, Vol. 6, Issue 1, 2026</td><td><span class="tag flag">Unverified</span> — low-profile journal; site brands it "world-first ABDC publication." Recommend independent verification before repeating the claim.</td></tr>
+</table>
+<p class="small" style="margin-top:10px">Net assessment: the <b>state awards (2 CMs), press features (national dailies), TV panels (ZEE) and magazine cover</b> are the externally observable, credible anchors. Titles/upadhis and the "world-first" research claims are self-reported and should be treated as brand positioning, not verified fact.</p>
+</div>
+
+<!-- ============ 4. PRODUCTS ============ -->
+<h2><span class="num">4</span>Programs &amp; Product Lineup (complete inventory)</h2>
+
+<div class="card">
+<h3>4.1 E.Y.E. — Explore Your Energy (flagship keynote)</h3>
+<ul>
+  <li><b>Format:</b> 90-minute (to 2-hour/half-day) interactive transformational masterclass for corporate conclaves, leadership summits, universities, Jain samaj conventions, women's organizations, Lions/Rotary/Inner Wheel.</li>
+  <li><b>Structure:</b> 3 phases — <b>E</b>nergy Awareness → <b>Y</b>our Life Pattern → <b>E</b>nergy Activation; closes with a "12-dimension actionable toolkit" + 21-day habit transformation deck.</li>
+  <li><b>The 12 tools:</b> Astro energy · Vastu &amp; space · Colour · Sound &amp; mantra (Beejakshara) · Geometric/yantra · Lunar biorhythm · Metal &amp; panch-tatva · Numbers · Meditation &amp; breath · Space &amp; object placement · Karma &amp; life-pattern awareness · Energy activation.</li>
+  <li><b>Claimed track record:</b> 25+ city keynote success (Ujjain, Indore, Mumbai, Raipur, Ahmedabad, Nasik documented); "100+ programs, 50+ cities, 50,000+ lives transformed, 1,000+ promoter &amp; CXO desks"; self-reported 4.9/5 delegate feedback.</li>
+  <li><b>Marketing differentiator:</b> "No blind belief · No fear-based predictions · Zero fake rituals · 100% practical zero-cost solutions" — he explicitly contrasts against traditional "prediction + dosha fear" astro programs.</li>
+  <li><b>Recognition:</b> Jain Mahiladarsh magazine <b>cover feature</b> directly attributed to E.Y.E. success.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>4.2 SOIL — "World's 1st Spiritual Oil" (D2C product, patented claim)</h3>
+<ul>
+  <li><b>What it is:</b> a personalized herbal oil formulated from <b>the buyer's DOB, Nakshatra and Rashi</b>, "activated" over a 7-day ritual process and shipped in an engraved wooden sanctuary box with a pure-silver element.</li>
+  <li><b>7-day process (as documented on site):</b> Day 1 personal energy profiling (name, DOB, birth time/place, photo "aura assessment") → Day 2 astro-herbal formulation from nakshatra-linked herbs → Day 3–4 spiritual activation at auspicious Hora (Navgraha, ॐ, Gayatri, Namokar, Bhaktamar, Kalyan mantra traditions + havan) → Day 5 solar/lunar + birth-Nakshatra Rudraksha energization → Day 6 silver inclusion &amp; UV-protective bottling → Day 7 wooden-box packaging &amp; dispatch.</li>
+  <li><b>4 formulations:</b> ① Foot-sole dropper (night grounding/sleep) · ② Palm roller (pre-meeting confidence) · ③ Bath &amp; cleanse (aura shuddhi) · ④ Deepak/Vastu lamp oil (space harmonization).</li>
+  <li><b>Claimed benefits:</b> "21 spiritual dimensions" — anti-anxiety, 7-chakra activation, aura enhancement, protection from "environmental negative vibrations." Marketing line: "Not a miracle. Not a magic oil. A personalized spiritual formulation."</li>
+  <li><b>Commercial mechanics:</b> ordered via WhatsApp (+91 90396 10001) with DOB; a downloadable 7-day guide PDF is the lead magnet; <b>price never published</b> (custom/premium tier). "Patented" is claimed; <span class="tag flag">no patent number disclosed — verify before repeating</span>.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>4.3 Bhavishyam Services (consultation layer)</h3>
+<ul>
+  <li><b>Astro-Nakshatra &amp; Kundali analysis</b> — full chart + nakshatra mapping, dasha timing, "practical non-dogmatic action guidelines" (fear-free framing).</li>
+  <li><b>Technical Vastu consultation</b> — directional energy zone mapping + elemental balancing <b>without demolition</b>; covers homes, corporate HQs, industrial plants, commercial buildings.</li>
+  <li><b>Mantra &amp; sound vibration therapy</b> — personalized mantra "prescription," Beejakshara pronunciation guide, daily contemplative routine blueprint (targets anxiety/stillness/intellect).</li>
+  <li><b>Signature &amp; corporate logo analysis</b> — graphic geometry (angles, slant, baseline, stroke pressure) "aligned with growth, credibility, authority"; includes a corporate logo "aesthetic &amp; energetic audit." (He has also announced a signature-analysis app via a YouTube short.)</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>4.4 Special Bhavishyam Mentoring (1-on-1, confidential — top of the ladder)</h3>
+<ul>
+  <li><b>Target:</b> business promoters, directors, industrialists, celebrities, public figures at "high-stakes decisions, strategic crossroads, demanding life transitions."</li>
+  <li><b>Offer:</b> exhaustive birth-chart/Dasha/Nakshatra study + customized SOIL + tailored mantra routines + technical Vastu synchronization of promoter offices, residences, boardrooms and factories; framed around mergers, capital deployment, leadership transitions via "karmic timing and planetary cycles" <i>plus macroeconomic awareness</i>.</li>
+  <li><b>Guarantee:</b> 100% NDA, "private sanctum," direct WhatsApp executive desk, zero intermediaries.</li>
+  <li><b>Pricing:</b> not published — the classic high-ticket, reference-driven closing model.</li>
+</ul>
+</div>
+
+<!-- ============ 5. DIGITAL FOOTPRINT ============ -->
+<h2><span class="num">5</span>Digital Footprint &amp; Channel Map</h2>
+<div class="card" style="overflow-x:auto">
+<table>
+  <tr><th>Channel</th><th>Handle / Asset</th><th class="num">Size</th><th>Read</th></tr>
+  <tr><td><span class="tag press">Website</span></td><td>bhavishyam.com (v4 redesign, bilingual HI/EN)</td><td class="num">—</td><td>Polished, conversion-optimized; every CTA → WhatsApp. Includes E.Y.E., SOIL, services, mentoring, media vault, SOIL PDF lead magnet, 7-day guide docs.</td></tr>
+  <tr><td><span class="tag ig">Instagram</span></td><td>@iambhavishyam</td><td class="num">6,868 followers · 223 posts</td><td>Very small for the claims. Bio: "Spiritual – Astrology – Mentoring – Healing – Blessing – Vedic Solutions." Not his real growth channel.</td></tr>
+  <tr><td><span class="tag yt">YouTube</span></td><td>@Bhavishyam (UCKZ31VLPAtMNh-HNi-JBriQ)</td><td class="num">Subs not published; video views 399–12K; 2 shorts (1.4K/1.7K views)</td><td>Small legacy channel — remedies/Urja-series (2019–2024) + Jain content + SOIL promo posts. Organization framing ("Bhavishyam is an organisation founded by…").</td></tr>
+  <tr><td><span class="tag fb">Facebook</span></td><td>"Vedic Science &amp; Lifestyle" page</td><td class="num">not measured</td><td>His stated FB presence (per YT about).</td></tr>
+  <tr><td><span class="tag wa">WhatsApp</span></td><td>+91 90396 10001</td><td class="num">—</td><td><b>The actual business funnel</b> — all service, SOIL and mentoring CTAs land here.</td></tr>
+  <tr><td><span class="tag tv">TV</span></td><td>ZEE MP/CG — #BudgetOnZee Union Budget panels; "National TV panelist" claims</td><td class="num">—</td><td>Economist credibility used on-air; award also conferred on this stage.</td></tr>
+  <tr><td><span class="tag press">Print</span></td><td>Dainik Bhaskar · Patrika/Patrika Plus (front-page feature: "सभी के पास मौजूद होता है बेहतर जिंदगी का मंत्र") · Navbharat · The Hitavada</td><td class="num">—</td><td>Regional-national press is his real "follower" base; clippings archived in his media vault.</td></tr>
+  <tr><td><span class="tag flag">X / LinkedIn</span></td><td>None found under his brand</td><td class="num">—</td><td>Absence noted — no meaningful X or LinkedIn presence surfaced in research.</td></tr>
+</table>
+<h3>Digital reach vs the social-first astro-creators (IG followers, Aug 2026)</h3>
+<div class="bar-row"><div class="bar-label">Jai Madaan</div><div class="bar-track"><div class="bar-fill" style="width:100%">7M</div></div></div>
+<div class="bar-row"><div class="bar-label">Askin Astrology</div><div class="bar-track"><div class="bar-fill" style="width:28.6%">2M</div></div></div>
+<div class="bar-row"><div class="bar-label">Acharya Vinod Kumar</div><div class="bar-track"><div class="bar-fill" style="width:28.6%">2M</div></div></div>
+<div class="bar-row"><div class="bar-label">Master Aditya Varma ⚠</div><div class="bar-track"><div class="bar-fill" style="width:18.6%">1.3M</div></div></div>
+<div class="bar-row"><div class="bar-label">Preetika Rao</div><div class="bar-track"><div class="bar-fill" style="width:18.6%">1.3M</div></div></div>
+<div class="bar-row"><div class="bar-label">Bhoomika Kalam</div><div class="bar-track"><div class="bar-fill" style="width:9.3%">648K</div></div></div>
+<div class="bar-row"><div class="bar-label"><b>Dr. Ashish Patni</b></div><div class="bar-track"><div class="bar-fill" style="width:0.8%;min-width:58px">6.9K</div></div></div>
+<p class="small">Same niche, two different businesses: Patni's graph would look absurdly flat next to the creator set — because he doesn't sell attention, he sells event capacity and executive trust.</p>
+</div>
+
+<!-- ============ 6. BUSINESS MODEL ============ -->
+<h2><span class="num">6</span>Business Model Analysis</h2>
+<div class="card">
+<h3>Revenue engine (inferred architecture)</h3>
+<table>
+  <tr><th>Layer</th><th>Offer</th><th>Buyer</th><th>Pricing model</th></tr>
+  <tr><td>Top (B2B)</td><td>E.Y.E. keynote / corporate &amp; society programs</td><td>Lions, Rotary, Inner Wheel, JITO, Jain samaj, universities, corporate conclaves, civic groups</td><td>Event fee (undisclosed; 50+ cities/100+ programs implies a touring circuit)</td></tr>
+  <tr><td>Top (B2B)</td><td>1-on-1 confidential mentoring (NDA)</td><td>Promoters, CXOs, industrialists, celebrities</td><td>High-ticket, reference-driven (undisclosed)</td></tr>
+  <tr><td>Middle (B2C)</td><td>Kundali analysis, Technical Vastu (incl. corporate/industrial), mantra therapy, signature/logo audit</td><td>Individuals + businesses via WhatsApp</td><td>Consultation fees (undisclosed)</td></tr>
+  <tr><td>Middle (D2C)</td><td>SOIL personalized spiritual oil (4 formats)</td><td>Individuals pan-India</td><td>Premium custom product (undisclosed); PDF guide as lead magnet</td></tr>
+  <tr><td>Bottom (media)</td><td>TV panels, newspaper features, award circuit</td><td>Audiences + sponsors</td><td>Free distribution feeding the funnel (halo economy)</td></tr>
+</table>
+<h3>Model reads</h3>
+<ul>
+  <li><b>It's a speaker-economy + high-ticket advisory hybrid</b> — closer to a management-consulting/guru brand than to the WhatsApp-consultation businesses run by Askin/Bhoomika. The NDA-mentoring tier is what an "economist-astrologer" for promoters would charge (decision-timing for M&amp;A, capital deployment — high perceived value).</li>
+  <li><b>The economist angle is a genuine differentiator:</b> Union Budget analysis on ZEE, macroeconomic keynote presentations, and the "Cosmic Finance" paper let him book <i>economic</i> events (budget weeks, industry summits) where pure astrologers can't enter. This widens the event pool beyond spiritual conferences.</li>
+  <li><b>Jain community + Chhattisgarh establishment are his core distribution:</b> Life Craft's Jain bhajan marathon, JITO Women's Wing tours, Jain Mahiladarsh cover, two-CM honors — a loyal, high-trust, high-spending community plus state-government goodwill. This is why his offline numbers (50K lives, 1,000 CXO desks) plausibly exceed anything his 6.9K IG followers could ever support.</li>
+  <li><b>Digital is a brochure, not a growth engine:</b> the v4 website is the landing experience; socials exist for credibility checks. There is no short-form content strategy at all — a deliberate or by-atrophy choice.</li>
+  <li><b>Weakness of the model:</b> key-person dependency (everything is Dr. Patni personally), no scalable digital asset, and a claim-heavy marketing layer (patented, world's first, record holder) that invites scrutiny in an increasingly verification-minded market.</li>
+</ul>
+</div>
+
+<!-- ============ 7. COMPETITIVE POSITION ============ -->
+<h2><span class="num">7</span>Competitive Positioning — vs the Top 6 Social-First Astro-Creators</h2>
+<div class="card" style="overflow-x:auto">
+<table>
+  <tr><th>Dimension</th><th>Dr. Ashish Patni (Bhavishyam)</th><th>Jai Madaan</th><th>Askin</th><th>Acharya Vinod</th><th>Preetika Rao</th><th>Bhoomika Kalam</th></tr>
+  <tr><td>Core business</td><td>Keynotes + CXO mentoring + SOIL D2C</td><td>Celebrity brand + app + media</td><td>Short-form funnel + WhatsApp consults</td><td>High-ticket consults + political advisory</td><td>Podcast/media brand</td><td>Consults + author brand</td></tr>
+  <tr><td>IG reach</td><td>6.9K</td><td>7M</td><td>2M (+844K HI)</td><td>2M</td><td>1.3M</td><td>648K</td></tr>
+  <tr><td>YT reach</td><td>small</td><td>1.1M</td><td>600K</td><td>23K</td><td>174K</td><td>267K</td></tr>
+  <tr><td>Establishment proof</td><td><b>2x CM awards, Guinness (org.), Shankaracharya blessing, 4 national dailies</b></td><td>TV panels, celebrity client base</td><td>— (content proof only)</td><td>Self-stated awards/lineage</td><td>Award-winning podcasts, acting credits</td><td>National journalism awards, Bharat Seva Ratna</td></tr>
+  <tr><td>Unique asset</td><td><b>Economist credibility + zero-dogma positioning + SOIL product</b></td><td>Celebrity interviews, 7M scale</td><td>Dual-language volume machine</td><td>Political proximity</td><td>Long-form interview moat</td><td>Consistency (2.5K posts, 1.4K videos)</td></tr>
+  <tr><td>Risk profile</td><td>Claim verification; key-person; tiny digital base</td><td>PR/wealth-claims controversy</td><td>Copyable format</td><td>Political-call risk</td><td>Long-form attention decay</td><td>Scale ceiling, dated style</td></tr>
+</table>
+<div class="verdict"><b>Positioning verdict:</b> Patni is the odd one out — he doesn't compete with this set for attention at all. He competes with <i>management speakers, Jain/Chhattisgarh community institutions and premium astro-advisors</i> for boardroom budgets. If he ever builds a digital presence, his "economist + zero-dogma + productized SOIL" combo would face almost no direct digital competition — but the ceiling of that hybrid lane is unproven at scale.</div>
+</div>
+
+<!-- ============ 8. SWOT ============ -->
+<h2><span class="num">8</span>SWOT</h2>
+<div class="card">
+<div class="swot">
+  <div class="s"><b>Strengths</b>• Unique economist-astrologer hybrid (budget panels + chart readings)<br>• Cross-party state honors (2 CMs) = rare regional legitimacy<br>• External press/TV/magazine validation (Bhaskar, Patrika, Hitavada, Navbharat, ZEE, Jain Mahiladarsh cover)<br>• Productized ladder: keynote → services → SOIL → NDA mentoring<br>• Loyal high-spending base (Jain community, Chhattisgarh business, CXO desks)<br>• "Zero dogma / no fear" brand line differentiates from the fear-based mass market</div>
+  <div class="w"><b>Weaknesses</b>• Negligible digital audience (6.9K IG, small YT) — no owned media asset<br>• Total key-person dependency; no team-visible content machine<br>• No published pricing, no visible external reviews — thin verifiable social proof<br>• Regional gravity (Chhattisgarh/MP core) vs Delhi-Mumbai media circuit of rivals<br>• "12 years research" and client claims (NDA) are inherently unverifiable</div>
+  <div class="o"><b>Opportunities</b>• A digital build (YouTube shorts + IG) in the "scientific/zero-dogma + economics" lane is wide open<br>• SOIL as a national D2C brand (currently WhatsApp-only) — the most scalable asset he owns<br>• Corporate "decision astrology + economic cycles" B2B SaaS/course productization<br>• Pan-India Jain &amp; women's-organization circuit expansion (already proven format)<br>• Books/audio around Cosmic Finance for global diaspora + finance audiences</div>
+  <div class="t"><b>Threats</b>• Verification culture: "patented," "world's first," "Guinness holder" claims are exposed to public fact-checking<br>• SOIL benefit claims (anxiety, aura, chakras) touch therapeutic-product regulation (FSSAI/Ayush/D&amp;C Act) for herbal products<br>• Low-profile journal for the "ABDC-indexed world-first" paper could undermine the research halo if scrutinized<br>• Speaker-market competition from established motivational/economic keynoters who don't need an astrology credential<br>• Reputational contagion: any negative on the astro category (e.g., consumer-protection actions) hits claim-heavy brands hardest</div>
+</div>
+</div>
+
+<!-- ============ 9. RISK / REPUTATION ============ -->
+<h2><span class="num">9</span>Reputation &amp; Risk Assessment</h2>
+<div class="card">
+<h3>What is independently observable (supports credibility)</h3>
+<ul>
+  <li>State felicitation by <b>two different CMs</b> of Chhattisgarh (award photos on site; cross-party = hard to fake at scale)</li>
+  <li>Regular print presence in <b>Dainik Bhaskar, Patrika (incl. front-page Patrika Plus feature), Navbharat, Hitavada</b>; ZEE MP/CG TV budget panels</li>
+  <li><b>Jain Mahiladarsh cover</b> tied to a specific, checkable program (E.Y.E.)</li>
+  <li>Guinness record text for the <b>Life Craft</b> organization's non-stop spiritual/Jain bhajan marathon, documented on his own archive page</li>
+  <li>Client testimonials (e.g., "Amit Jain — accurate readings, 100% physical features correct, results in 3 months"; RajKumar Agrawal's Hindi testimonial) — <i>self-published, unaudited</i></li>
+</ul>
+<h3>Claims to treat cautiously (flags)</h3>
+<ul>
+  <li><span class="tag flag">FLAG</span> <b>"Guinness World Record Holder" (personal)</b> — the record is the organization's (Life Craft/Team Life Craft); personal branding overstates it.</li>
+  <li><span class="tag flag">FLAG</span> <b>SOIL "patented"</b> — no patent number or office cited anywhere on the site.</li>
+  <li><span class="tag flag">FLAG</span> <b>"World's 1st Spiritual Oil"</b> — marketing superlative, not a registrable fact.</li>
+  <li><span class="tag flag">FLAG</span> <b>SOIL therapeutic-adjacent claims</b> (anti-anxiety, 7-chakra activation, aura defense) — positioned as "spiritual" but read as health claims; regulatory exposure for an unregistered herbal product.</li>
+  <li><span class="tag flag">FLAG</span> <b>Academic halo</b> — "world-first ABDC publication" in a low-profile 2026 journal; "mathematical correlation between planetary cycles and market volatility" is the kind of claim that invites (and would likely not survive) serious statistical scrutiny.</li>
+  <li><span class="tag warn">NOTE</span> Celebrity/political client base ("prestigious business houses and celebrities") is asserted under NDA framing — plausible for his circuit, but unverifiable by design.</li>
+</ul>
+<div class="callout green"><b>Fair balance:</b> the flags are typical of a premium, claim-rich Indian spirituality brand; the <i>observable</i> record (2x CM, national dailies, TV, magazine cover, org. record, consistent multi-city touring) is substantially stronger than the average "celebrity astrologer" in this market. The honest characterization: <b>a regionally established, externally validated speaker-advisor whose marketing layer runs ahead of his verifiable core.</b></div>
+</div>
+
+<!-- ============ 10. RATE CARD ============ -->
+<h2><span class="num">10</span>Estimated Engagement / Booking Benchmarks (planning ranges only)</h2>
+<div class="callout blue">No public rate card exists; all figures are planning estimates for an India-based premium keynote/advisory profile of this caliber (±50%). INR with USD reference.</div>
+<div class="card" style="overflow-x:auto">
+<table>
+  <tr><th>Engagement</th><th class="num">Estimated range</th><th>Basis</th></tr>
+  <tr><td>E.Y.E. keynote (corporate/conclave, 90 min–half day, within MP/CG core belt)</td><td class="num">₹2L – ₹8L ($2.4K – $9.6K)</td><td>Regional premium speaker with state-award halo; travel-heavy circuit</td></tr>
+  <tr><td>E.Y.E. keynote (metro: Mumbai/Delhi/Goa, big-circle event)</td><td class="num">₹5L – ₹15L+ ($6K – $18K+)</td><td>Metro event budgets + CXO-audience premium</td></tr>
+  <tr><td>1-on-1 confidential mentoring (promoter/CXO, per session)</td><td class="num">₹25K – ₹1L+ per session (likely retainer packaging)</td><td>High-ticket decision-advisory pattern; NDA exclusivity; no published pricing</td></tr>
+  <tr><td>SOIL kit (D2C, custom 4-format)</td><td class="num">₹5K – ₹25K per kit (estimate)</td><td>Custom herbal + silver + wooden-box packaging; WhatsApp-only sales; premium ritual labor (7-day process)</td></tr>
+  <tr><td>Corporate Technical Vastu (site-level, non-demolition)</td><td class="num">₹1L – ₹5L per engagement (estimate)</td><td>Industrial/corporate site scope described on services page</td></tr>
+  <tr><td>Signature/logo audit (personal/corporate)</td><td class="num">₹15K – ₹75K (estimate)</td><td>Short-cycle niche service; corporate logo "audit" upsell</td></tr>
+  <tr><td>Media/TV panel (budget season)</td><td class="num">Honorarium-based or strategic (free)</td><td>Used for halo economy; ZEE MP/CG precedent</td></tr>
+</table>
+</div>
+
+<!-- ============ 11. METHOD ============ -->
+<h2><span class="num">11</span>Methodology &amp; Sources</h2>
+<div class="card">
+<ul>
+  <li><b>Primary (his own brand, audited 30 Aug 2026):</b> bhavishyam.com — homepage (v4), /about, /eye, /spiritual-oil, /services, /mentoring, /media, archived /about-us &amp; /testimonials snippets. All product/program/award claims are from these pages and are labeled as such.</li>
+  <li><b>Digital assets:</b> Instagram @iambhavishyam (profile snippet: 6,868 followers, 223 posts); YouTube @Bhavishyam / UCKZ31VLPAtMNh-HNi-JBriQ (channel about, video view counts 399–12K, 2 shorts); Facebook "Vedic Science &amp; Lifestyle" (referenced in YT about; not measured).</li>
+  <li><b>Third-party corroborations found:</b> none surfaced in open web search beyond his own archived press clippings (Patrika Plus front feature, Jain Mahiladarsh cover, award photos, ZEE budget panel). No independent news articles, reviews or complaint threads (e.g., NoComplaint/Reddit) were found in this pass — a gap worth a dedicated checks pass if this goes into a diligence file.</li>
+  <li><b>Interpretation rules used:</b> (1) claims on his site = self-reported; (2) photos/clippings/awards = "externally observable" but host-controlled; (3) "world-first/patented/record holder" = flagged; (4) no pricing found → all rates estimated and marked.</li>
+  <li><b>Known gaps:</b> exact YouTube subscriber count (not published on channel page snapshot); SOIL pricing; keynote fee schedule; book list (he is styled "author/columnist" — a title search was not run in this pass); personal biographical details (age, DOB not public on site); any X/LinkedIn footprint.</li>
+</ul>
+</div>
+
+<div class="foot">
+  Compiled 30 Aug 2026 · Complete R&amp;D Report: Dr. Ashish Patni (Bhavishyam) · All monetary figures are planning estimates unless sourced · Distinguish self-reported brand claims from externally observable evidence as labeled above.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "dr-ashish-patni-bhavishyam-strategy-portal",
+  "version": "1.0.0",
+  "description": "Executive 360 Growth Strategy & Market Intelligence Portal for Dr. Ashish Patni (Bhavishyam)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

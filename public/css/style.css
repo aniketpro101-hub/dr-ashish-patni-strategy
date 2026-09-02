@@ -1,0 +1,127 @@
+/* Master Luxury & Executive Styling for Dr. Ashish Patni Portal */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-dark: #091510;
+  --primary-emerald: #135e43;
+  --emerald-accent: #1e7d5a;
+  --emerald-light: #e4f3eb;
+  --gold-royal: #c59b27;
+  --gold-glow: #e8c046;
+  --gold-soft: #fbf6e8;
+  --bg-sand: #f4f7f4;
+  --card-bg: #ffffff;
+  --border-line: #dbe6e0;
+  --text-dark: #0f1d17;
+  --text-muted: #52665d;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-sand);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-serif-royal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphic luxury effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(219, 230, 224, 0.9);
+}
+
+.glass-dark {
+  background: rgba(9, 21, 16, 0.96);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+}
+
+/* Gold Gradient Text & Accents */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d4af37 0%, #f7e6a5 50%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-gradient-bg {
+  background: linear-gradient(135deg, #091510 0%, #135e43 55%, #0e3d2c 100%);
+}
+
+.gold-badge {
+  background: linear-gradient(135deg, #fef9e7 0%, #f7ebc2 100%);
+  border: 1px solid #d4af37;
+  color: #785a08;
+}
+
+/* Tab active state */
+.tab-btn.active {
+  background: linear-gradient(135deg, #0d2018 0%, #135e43 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(19, 94, 67, 0.3);
+  border-color: #1e7d5a;
+}
+.tab-btn.active .tab-icon {
+  color: #e8c046;
+}
+
+/* Card hover animation */
+.hover-elevate {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-elevate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(15, 29, 23, 0.08);
+}
+
+/* Hindi Callout Card */
+.hindi-callout {
+  background: linear-gradient(135deg, #fcf8ee 0%, #f6edd4 100%);
+  border-left: 4px solid var(--gold-royal);
+}
+
+/* Mobile Drawer */
+#mobileDrawer.open {
+  transform: translateX(0);
+}
+#mobileDrawer {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #e9f0ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #adc2b6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8aa496;
+}
+
+/* Print optimizations */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

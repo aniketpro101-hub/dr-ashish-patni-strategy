@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Quick Nav Links -->
       <div class="bhavishyam-menu-links">
+        <a href="/page-eye-social.html" class="bhavishyam-nav-btn" style="background: linear-gradient(135deg, #b45309, #d97706); color: #fff; border-color: #f59e0b; font-weight: 800; box-shadow: 0 2px 8px rgba(217, 119, 6, 0.4);">🌺 EYE SOCIAL (संस्थाओं के लिए)</a>
         <a href="/page-one-view.html" class="bhavishyam-nav-btn highlight">🌟 THE ONE VIEW (Topper Blueprint)</a>
         <a href="/" class="bhavishyam-nav-btn">🏠 Master 360° Portal</a>
         <a href="/page-creator-analysis.html" class="bhavishyam-nav-btn">📊 Creator Analysis</a>
